@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { AppConfig } from "@/config/app.config";
+import TopBar from "@/components/Shared/layouts/TopBar";
+import Navbar from "@/components/Shared/layouts/Navbar";
+import Footer from "@/components/Shared/layouts/Footer";
 
 export const metadata: Metadata = {
   title: AppConfig().app.name,
@@ -14,7 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>{children}</body>
+      <body className="poppins">
+        <TopBar/>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
