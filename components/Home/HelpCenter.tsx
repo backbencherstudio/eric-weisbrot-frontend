@@ -1,7 +1,27 @@
-import React from "react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
+"use client";
+import React, { useState } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion";
 
 const HelpCenter = () => {
+  const [openItems, setOpenItems] = useState(new Set());
+
+  const handleToggle = (itemId: string) => {
+    setOpenItems((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(itemId)) {
+        newSet.delete(itemId);
+      } else {
+        newSet.add(itemId);
+      }
+      return newSet;
+    });
+  };
+
   return (
     <div
       className="
@@ -16,8 +36,8 @@ const HelpCenter = () => {
           Find answers to the most commonly asked questions about cur services.
         </p>
       </div>
-      <div className="mt-12">
-        <div className="mt-12 max-w-[1033px] mx-auto">
+      <div className="lg:mt-12 mt-8">
+        <div className="max-w-[1033px] mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqData.map((faq) => (
               <AccordionItem
@@ -25,10 +45,23 @@ const HelpCenter = () => {
                 value={faq.id}
                 className="border-none bgPrimary rounded-[10px] overflow-hidden data-[state=open]:bg-transparent"
               >
-                <AccordionTrigger className="p-6 cursor-pointer text-white hover:no-underline hover:bg-[#2B4C8C]/90 data-[state=open]:bg-[#2B4C8C] data-[state=open]:rounded-t-lg data-[state=open]:rounded-b-none md:text-lg text-base  text-left font-medium leading-[180%]">
+                <AccordionTrigger
+                  className="md:p-6 p-4 pr-20 cursor-pointer text-white hover:no-underline hover:bg-[#2B4C8C]/90 data-[state=open]:bg-[#2B4C8C] data-[state=open]:rounded-t-lg data-[state=open]:rounded-b-none md:text-lg text-base  text-left font-medium leading-[180%] relative"
+                  onClick={() => handleToggle(faq.id)}
+                >
                   {faq.question}
+                  <div className="bg-[#1F3C8D] absolute text-2xl h-full right-0 top-0 flex items-center justify-center w-[70px] transition-all duration-300 ease-in-out">
+                    {/* Render + when closed, and - when open */}
+                    <span
+                      className={`block transition-transform duration-500 ease-in-out ${
+                        openItems.has(faq.id) ? "rotate-180" : "rotate-0"
+                      }`}
+                    >
+                      {openItems.has(faq.id) ? "-" : "+"}
+                    </span>
+                  </div>
                 </AccordionTrigger>
-                <AccordionContent className="p-6 bg-[#F3F6FC] text-[#1D1F2C] leading-[180%] md:text-lg text-base">
+                <AccordionContent className="md:p-6 p-3 bg-[#F3F6FC] text-[#1D1F2C] leading-[180%] lg:text-lg md:text-base text-sm">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
