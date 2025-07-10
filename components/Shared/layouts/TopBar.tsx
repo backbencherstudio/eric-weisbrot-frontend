@@ -6,7 +6,7 @@ import React from "react";
 const TopBar = () => {
   return (
     <div className="bg-[#162F73]  py-[6px] text-white ">
-        <div className="max-w-[1920px] mx-auto 2xl:px-[60px] px-5">
+        <div className="maxContainer">
           <div className="md:justify-between flex gap-2.5 leading-[180%] lg:text-lg text-base items-center  flex-wrap">
             <div className="flex flex-wrap md:gap-6 gap-2.5">
               <div className="flex  items-center gap-2.5">

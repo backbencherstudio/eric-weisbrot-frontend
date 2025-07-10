@@ -4,7 +4,7 @@ import ArrowUpIcon from "../Icons/ArrowUpIcon";
 
 const HomeBanner = () => {
   return (
-    <div className="max-w-[1920px] mx-auto 2xl:px-[60px] px-5 ">
+    <div className="maxContainer ">
       <div
         className="bg-no-repeat w-full  rounded-[20px]"
         style={{

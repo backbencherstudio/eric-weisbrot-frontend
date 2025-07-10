@@ -35,7 +35,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="max-w-[1920px] mx-auto 2xl:px-[60px] px-5 ">
+    <div className="maxContainer ">
       {/* Navbar */}
       <div className="bg-white backdrop-blur-[4px] leading-[180%] text-black  ">
         <div className="flex items-center xl:gap-4 gap-2 py-3 lg:py-[22px] justify-between">
