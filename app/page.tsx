@@ -1,7 +1,11 @@
+import AboutUs from "@/components/Home/AboutUs";
+import HomeBanner from "@/components/Home/HomeBanner";
+
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center ">
-      <h1></h1>
+    <div className="">
+      <HomeBanner/>
+      <AboutUs/>
     </div>
   );
 }

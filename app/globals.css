@@ -15,6 +15,16 @@
 .btn {
     @apply  leading-[180%] text-white bg-[#162F73]  hover:bg-[#162F73]/90 cursor-pointer xl:px-9 px-5 lg:py-3.5 py-3 rounded-full border-[#162F73] border h-[52px] flex items-center;
 }
-
-
+.sectionCategory {
+    @apply  leading-[180%] text-sm font-medium border text-[#162F73] border-[#162F73] rounded-[60px] w-[130px] px-4 py-[3px];
+}
+.headerText {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; 
+  font-size: clamp(28px, 5vw, 48px);
+}
+.maxContainer {
+  @apply max-w-[1920px] mx-auto 2xl:px-[60px] px-5 
+}
 
