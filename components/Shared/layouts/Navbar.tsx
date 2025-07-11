@@ -12,7 +12,7 @@ export default function Navbar() {
 
   // Define the links in an array
   const navLinks = [
-    { name: "Patients FAQs", href: "#" },
+    { name: "Patients FAQs", href: "patients-faqs" },
     { name: "For Providers", href: "#" },
     { name: "Conditions & Therapies", href: "#" },
     { name: "About Us", href: "#" },
