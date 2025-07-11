@@ -70,6 +70,12 @@ console.log(selectedOptions)
   return (
     <div className="maxContainer md:my-[100px] my-[60px]">
       <div className="">
+        <div className="flex flex-col gap-[15px] justify-center items-center mb-[15px] text-center">
+        <h1 className="headerText text-[#161721] !font-semibold">How Can We Help?</h1>
+        <p className="text-[#4A4C56] leading-[180%]">
+          Have a question? Send us a message, and we'll get right back to you.
+        </p>
+      </div>
         <div className="rounded-[24px] border border-[#0000000D] lg:p-[56px] md:p-[32px] p-4">
           <h1 className="xl:text-[32px] md:text-[28px] text-2xl font-medium leading-[130%] text-[#1D1F2C] lg:mb-8 md:mb-6 mb-4">
             Send us a message
@@ -226,7 +232,7 @@ console.log(selectedOptions)
             </div>
 
             {/* How did you hear about us */}
-            <div className="py-3.5 px-4 bg-[#F3F6FC] border border-[#E9E9EA]  rounded-md h-auto">
+            <div className="py-3.5 px-4 bg-[#F3F6FC] border border-[#E9E9EA]  rounded-md ">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3  max-w-[660px]">
                 {options.map((option) => (
                   <div key={option} className="relative">
@@ -243,7 +249,7 @@ console.log(selectedOptions)
                       </div>
                       <span
                         className={`
-                 md:text-base text-sm font-medium leading-[180%] transition-colors duration-200
+                 md:text-base text-sm leading-[180%] transition-colors duration-200
                   ${
                     selectedOptions.includes(option)
                       ? "text-blue-900"

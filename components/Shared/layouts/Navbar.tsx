@@ -15,7 +15,7 @@ export default function Navbar() {
     { name: "Patients FAQs", href: "patients-faqs" },
     { name: "For Providers", href: "#" },
     { name: "Conditions & Therapies", href: "#" },
-    { name: "About Us", href: "#" },
+    { name: "About Us", href: "about-us" },
     { name: "Contact Us", href: "contact-us" },
   ];
 
