@@ -16,7 +16,7 @@ export default function Navbar() {
     { name: "For Providers", href: "#" },
     { name: "Conditions & Therapies", href: "#" },
     { name: "About Us", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "Contact Us", href: "contact-us" },
   ];
 
   const sidebarRef = useRef(null);
