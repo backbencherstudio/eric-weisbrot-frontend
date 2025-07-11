@@ -1,6 +1,8 @@
 import React from "react";
 import banner from "@/public/home/banner.png";
 import ArrowUpIcon from "../Icons/ArrowUpIcon";
+import { Link2 } from "lucide-react";
+import Link from "next/link";
 
 const HomeBanner = () => {
   return (
@@ -32,12 +34,12 @@ const HomeBanner = () => {
             </h1>
           </div>
           <div className="flex items-center mt-2.5">
-            <button className="btn xl:text-lg lg:text-base ">
+            <Link href="/submit-referral" className="btn xl:text-lg lg:text-base ">
               Submit A Referral
-            </button>
-            <span className="bgPrimary w-[52px] h-[52px] rounded-full flex items-center justify-center">
+            </Link>
+            <Link href="/submit-referral" className="bgPrimary w-[52px] h-[52px] rounded-full flex items-center justify-center">
               <ArrowUpIcon />
-            </span>
+            </Link>
           </div>
         </div>
       </div>

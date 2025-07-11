@@ -62,12 +62,18 @@ export default function Navbar() {
             ))}
           </div>
           <div className="hidden lg:flex items-center">
-            <button className="btn xl:text-lg lg:text-base ">
+            <Link
+              href="/submit-referral"
+              className="btn xl:text-lg lg:text-base "
+            >
               Submit A Referral
-            </button>
-            <span className="bgPrimary w-[52px] h-[52px] rounded-full flex items-center justify-center">
+            </Link>
+            <Link
+              href="/submit-referral"
+              className="bgPrimary w-[52px] h-[52px] rounded-full flex items-center justify-center"
+            >
               <ArrowUpIcon />
-            </span>
+            </Link>
           </div>
 
           {/* Mobile Menu Icon */}
@@ -117,8 +123,8 @@ export default function Navbar() {
                 Submit A Referral
               </button>
               <span className="bgPrimary w-[52px] h-[52px] rounded-full flex items-center justify-center ">
-              <ArrowUpIcon />
-            </span>
+                <ArrowUpIcon />
+              </span>
             </div>
           </div>
         </div>
