@@ -14,7 +14,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Patients FAQs", href: "patients-faqs" },
     { name: "For Providers", href: "#" },
-    { name: "Conditions & Therapies", href: "#" },
+    { name: "Conditions & Therapies", href: "condition-therapies" },
     { name: "About Us", href: "about-us" },
     { name: "Contact Us", href: "contact-us" },
   ];

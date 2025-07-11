@@ -10,8 +10,8 @@ const ReuseableBanner = ({banner,text}) => {
           backgroundImage: `url("${banner.src}")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          paddingTop: `clamp(80px, 10vw, 189px)`,
-          paddingBottom: `clamp(80px, 10vw, 189px)`,
+          paddingTop: `clamp(100px, 10vw, 189px)`,
+          paddingBottom: `clamp(100px, 10vw, 189px)`,
           fontSize: `clamp(28px, 5vw, 56px)`
         }}
       >
