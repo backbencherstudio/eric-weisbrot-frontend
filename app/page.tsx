@@ -1,7 +1,15 @@
+import AboutUs from "@/components/Home/AboutUs";
+import BookConsultation from "@/components/Home/BookConsultation";
+import HelpCenter from "@/components/Home/HelpCenter";
+import HomeBanner from "@/components/Home/HomeBanner";
+
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1>Hello World</h1>
+    <div className="">
+      <HomeBanner/>
+      <AboutUs/>
+      <BookConsultation/>
+      <HelpCenter/>
     </div>
   );
 }
