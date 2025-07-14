@@ -6,15 +6,17 @@ import ArrowUpIcon from "@/components/Icons/ArrowUpIcon";
 import MenuIcon from "@/components/Icons/MenuIcon";
 import CloseIcon from "@/components/Icons/CloseIcon";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 
 export default function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-
+   const pathname = usePathname()
+   console.log(pathname,"pathhh")
   // Define the links in an array
   const navLinks = [
     { name: "Patients FAQs", href: "patients-faqs" },
-    { name: "For Providers", href: "#" },
-    { name: "Conditions & Therapies", href: "condition-therapies" },
+    { name: "Conditions & Therapies", href: "conditions-therapies" },
     { name: "About Us", href: "about-us" },
     { name: "Contact Us", href: "contact-us" },
   ];
@@ -40,26 +42,32 @@ export default function Navbar() {
       <div className="bg-white backdrop-blur-[4px] leading-[180%] text-black  ">
         <div className="flex items-center xl:gap-4 gap-2 py-3 lg:py-[22px] justify-between">
           <div className="w-[190px] h-[66px]">
-            <Image
-              src={logo}
-              alt="logo"
-              width={100}
-              height={100}
-              unoptimized
-              className="h-full w-full"
-            />
+            <Link href="/">
+              <Image
+                src={logo}
+                alt="logo"
+                width={100}
+                height={100}
+                unoptimized
+                className="h-full w-full"
+              />
+            </Link>
           </div>
           <div className="hidden lg:flex xl:gap-6 lg:gap-3">
             {/* Loop through the navLinks array */}
-            {navLinks.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                className="text-center xl:text-[16px] text-sm font-normal"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link, index) => {
+              const isActive = pathname === `/${link.href}`
+              console.log(isActive,"active")
+              return (
+                <Link
+                  key={index}
+                  href={link.href}
+                  className={`text-center lg:text-[16px] text-sm  ${isActive ? "text-[#162F73] font-medium border- underline underline-offset-12 border-[#162F73]" :"font-normal"}`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
           <div className="hidden lg:flex items-center">
             <Link
@@ -93,19 +101,21 @@ export default function Navbar() {
       {isSidebarOpen && (
         <div
           ref={sidebarRef}
-          className="lg:hidden fixed top-0 left-0 md:w-1/3 w-2/3 bg-white h-full z-50 shadow-lg"
+          className="lg:hidden fixed top-0 left-0 md:w-2/5 w-2/3 bg-white h-full z-50 shadow-lg"
         >
           <div className="inset-0 bg-dark "></div>
           <div className="flex justify-between p-4">
             <div className="w-[190px] h-[66px]">
-              <Image
-                src={logo}
-                alt="logo"
-                width={100}
-                height={100}
-                unoptimized
-                className="h-full w-full"
-              />
+              <Link href="/">
+                <Image
+                  src={logo}
+                  alt="logo"
+                  width={100}
+                  height={100}
+                  unoptimized
+                  className="h-full w-full"
+                />
+              </Link>
             </div>
             <button onClick={() => setSidebarOpen(false)}>
               <CloseIcon className="w-6 h-6" />

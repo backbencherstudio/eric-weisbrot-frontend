@@ -38,34 +38,92 @@ const Counseling = () => {
           <Accordion
             type="single"
             collapsible
-            className="space-y-4 flex flex-wrap"
+            className="space-y-4 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 justify-between items-start"
           >
-            {medications.map((faq) => (
-              <AccordionItem
-                key={faq.id}
-                value={faq.name}
-                className="border border-[#EBF5FC] shadow-sm rounded-[10px] overflow-hidden data-[state=open]:bg-transparent w-full md:w-1/3 lg:w-1/3"
-              >
-                <AccordionTrigger
-                  className="md:p-6 p-4 pr-20 cursor-pointer text-[#1D1F2C] hover:no-underline data-[state=open]:rounded-t-lg data-[state=open]:rounded-b-none lg:text-2xl md:text-xl text-lg text-left font-medium leading-[180%] relative"
-                  onClick={() => handleToggle(faq.name)}
+            <div className=" lg:space-y-6 space-y-4">
+              {medications.slice(0, 17).map((faq) => (
+                <AccordionItem
+                  key={faq.id}
+                  value={faq.name}
+                  className=" rounded-[10px] border border-[#EBF5FC] bg-white shadow-[0px_4px_13.6px_0px_rgba(206,204,204,0.15)] overflow-hidden data-[state=open]:bg-transparent  "
                 >
-                  {faq.name}
-                  <div className="absolute text-2xl h-full right-0 top-0 flex items-center justify-center w-[70px] transition-all duration-300 ease-in-out">
-                    <span
-                      className={`block transition-transform duration-500 ease-in-out ${
-                        openItems.has(faq.name) ? "rotate-180" : "rotate-0"
-                      }`}
-                    >
-                      {openItems.has(faq.name) ? "-" : "+"}
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="md:p-6 p-3 text-[#1D1F2C] leading-[180%] lg:text-lg md:text-base text-sm">
-                  {faq.content}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
+                  <AccordionTrigger
+                    className="md:p-6 p-4 data-[state=open]:pb-0 pr-20 cursor-pointer text-[#1D1F2C] hover:no-underline data-[state=open]:rounded-t-lg data-[state=open]:rounded-b-none lg:text-2xl md:text-xl text-lg text-left font-medium leading-[180%] relative"
+                    onClick={() => handleToggle(faq.name)}
+                  >
+                    {faq.name}
+                    <div className="absolute text-2xl h-full right-0 top-0 flex items-center justify-center w-[70px] transition-all duration-300 ease-in-out">
+                      <span
+                        className={`block transition-transform duration-500 ease-in-out ${
+                          openItems.has(faq.name) ? "rotate-180" : "rotate-0"
+                        }`}
+                      >
+                        {openItems.has(faq.name) ? "-" : "+"}
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="md:p-5 p-3 text-[#1D1F2C] leading-[180%] lg:text-lg md:text-base text-sm">
+                    {faq.content}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </div>
+            <div className=" lg:space-y-6 space-y-4">
+              {medications.slice(17, 34).map((faq) => (
+                <AccordionItem
+                  key={faq.id}
+                  value={faq.name}
+                  className=" rounded-[10px] border border-[#EBF5FC] bg-white shadow-[0px_4px_13.6px_0px_rgba(206,204,204,0.15)] overflow-hidden data-[state=open]:bg-transparent "
+                >
+                  <AccordionTrigger
+                    className="md:p-6 p-4 pr-20 cursor-pointer text-[#1D1F2C] hover:no-underline data-[state=open]:rounded-t-lg data-[state=open]:rounded-b-none lg:text-2xl md:text-xl text-lg text-left font-medium leading-[180%] relative"
+                    onClick={() => handleToggle(faq.name)}
+                  >
+                    {faq.name}
+                    <div className="absolute text-2xl h-full right-0 top-0 flex items-center justify-center w-[70px] transition-all duration-300 ease-in-out">
+                      <span
+                        className={`block transition-transform duration-500 ease-in-out ${
+                          openItems.has(faq.name) ? "rotate-180" : "rotate-0"
+                        }`}
+                      >
+                        {openItems.has(faq.name) ? "-" : "+"}
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="md:p-6 p-3 text-[#1D1F2C] leading-[180%] lg:text-lg md:text-base text-sm">
+                    {faq.content}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </div>
+            <div className=" lg:space-y-6 space-y-4">
+              {medications.slice(34, 50).map((faq) => (
+                <AccordionItem
+                  key={faq.id}
+                  value={faq.name}
+                  className="rounded-[10px] border border-[#EBF5FC] bg-white shadow-[0px_4px_13.6px_0px_rgba(206,204,204,0.15)] overflow-hidden data-[state=open]:bg-transparent "
+                >
+                  <AccordionTrigger
+                    className="md:p-6 p-4 pr-20 cursor-pointer text-[#1D1F2C] hover:no-underline data-[state=open]:rounded-t-lg data-[state=open]:rounded-b-none lg:text-2xl md:text-xl text-lg text-left font-medium leading-[180%] relative"
+                    onClick={() => handleToggle(faq.name)}
+                  >
+                    {faq.name}
+                    <div className="absolute text-2xl h-full right-0 top-0 flex items-center justify-center w-[70px] transition-all duration-300 ease-in-out">
+                      <span
+                        className={`block transition-transform duration-500 ease-in-out ${
+                          openItems.has(faq.name) ? "rotate-180" : "rotate-0"
+                        }`}
+                      >
+                        {openItems.has(faq.name) ? "-" : "+"}
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="md:p-5 p-3 text-[#1D1F2C] leading-[180%] lg:text-lg md:text-base text-sm">
+                    {faq.content}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </div>
           </Accordion>
         </div>
       </div>
@@ -76,61 +134,53 @@ const Counseling = () => {
 export default Counseling;
 
 const StepComponent = () => {
+  const faxNumbers = [
+    { state: "Connecticut", number: "(123) 456-7890" },
+    { state: "Maine", number: "(123) 456-7890" },
+    { state: "Massachusetts", number: "(123) 456-7890" },
+    { state: "New Hampshire", number: "(123) 456-7890" },
+    { state: "Rhode Island", number: "(123) 456-7890" },
+    { state: "Vermont", number: "(123) 456-7890" },
+  ];
+
   return (
-    <div className="step-component">
-      {/* Step 1 */}
-      <div className="step">
-        <div className="step-header">
-          <h3>Step 1</h3>
-          <h2>Download Specific Order Set for Therapy</h2>
-        </div>
-        <div className="step-content">
-          <p>
-            Download the specific order set for therapy or use our online order
-            submission process.
-          </p>
-        </div>
-        <div className="step-actions">
-          <button className="download-btn">Download</button>
-          <p>Or use our online order submission process</p>
-        </div>
+    <div className="">
+      <div className="border-b pb-4">
+        <h2 className="md:text-lg font-medium leading-[180%] text-black ">
+          Step 1:
+        </h2>
+        <p className="md:text-base text-sm mt-3 md:max-w-[257px] leading-[180%] ">
+          Download Specific Order Set for Therapy
+        </p>
+        <button className="btn md:mt-5 mt-4">Download</button>
+        <p className="md:text-base text-sm mt-4  leading-[180%] ">
+          Or use our online order submission <br /> process
+        </p>
       </div>
 
-      {/* Step 2 */}
-      <div className="step">
-        <div className="step-header">
-          <h3>Step 2</h3>
-          <h2>Fax or Submit Forms to Dr. Eric website</h2>
-        </div>
-        <div className="step-content">
-          <p>
-            Submit completed forms with supporting documentation to orders
-            example@gmail.com or submit via our state fax:
+      <div className=" border-gray-200 md:mt-8 mt-6">
+        <h2 className="md:text-lg font-medium leading-[180%] text-black">
+          Step 2:
+        </h2>
+        <p className="md:text-xl text-lg font-medium leading-[180%]">
+          Fax or Submit Forms to Dr. Eric's website
+        </p>
+        <div className="md:max-w-[285px]">
+          <p className="md:text-base leading-[180%]  text-sm text-[#4A4C56] mt-4">
+            Submit completed forms with supporting documentation to orders{" "}
+            <a href="mailto:example@gmail.com" className="text-[#162F73]">
+              example@gmail.com
+            </a>{" "}
+            or submit via our state fax:
           </p>
-          <ul>
-            <li>
-              Connecticut: <span>(123) 456-7890</span>
-            </li>
-            <li>
-              Maine: <span>(123) 456-7890</span>
-            </li>
-            <li>
-              Massachusetts: <span>(123) 456-7890</span>
-            </li>
-            <li>
-              New Hampshire: <span>(123) 456-7890</span>
-            </li>
-            <li>
-              Rhode Island: <span>(123) 456-7890</span>
-            </li>
-            <li>
-              Vermont: <span>(123) 456-7890</span>
-            </li>
-          </ul>
-        </div>
-        <div className="step-actions">
-          <button className="download-btn">Download</button>
-          <p>Or use our online order submission process</p>
+
+          <div className="flex flex-col lg:mt-8 mt-6 gap-3">
+            {faxNumbers.map((fax, index) => (
+              <p key={index} className="md:text-base text-sm font-medium leadint-[180%] text-[#1D1F2C] ">
+                {fax.state}: <span className="text-[#4A4C56] leading-[180%] md:text-base text-sm">{fax.number}</span>
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </div>

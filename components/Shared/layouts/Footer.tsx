@@ -8,6 +8,7 @@ import TwitterIcon from "@/components/Icons/TwitterIcon";
 import React from "react";
 import logo from "@/public/logoFooter.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const quicklink = [
   { text: "Therapies", href: "#" },
@@ -47,14 +48,16 @@ const Footer = () => {
           <div className="lg:col-span-1 flex flex-col justify-between gap-4">
             <div className="">
               <div className="w-[190px] h-[66px]">
-                <Image
-                  alt="logo"
-                  src={logo}
-                  width={100}
-                  height={100}
-                  className="w-full h-full"
-                  unoptimized
-                />
+                <Link href="/">
+                  <Image
+                    alt="logo"
+                    src={logo}
+                    width={100}
+                    height={100}
+                    className="w-full h-full"
+                    unoptimized
+                  />
+                </Link>
               </div>
             </div>
             <p className="text-[#E9E9EA] md:text-base text-sm leading-[180%] md:max-w-[338px]">
@@ -81,7 +84,9 @@ const Footer = () => {
 
           {/* Quick Links Section */}
           <div>
-            <h4 className="font-semibold lg:text-xl md:text-lg text-base md:mb-6 mb-3">Quick Links</h4>
+            <h4 className="font-semibold lg:text-xl md:text-lg text-base md:mb-6 mb-3">
+              Quick Links
+            </h4>
             <ul className="flex flex-col md:gap-3 gap-1">
               {quicklink.map((link, index) => (
                 <li key={index}>
@@ -98,7 +103,9 @@ const Footer = () => {
 
           {/* Help Section */}
           <div>
-            <h4 className="font-semibold lg:text-xl md:text-lg text-base md:mb-6 mb-3">Help</h4>
+            <h4 className="font-semibold lg:text-xl md:text-lg text-base md:mb-6 mb-3">
+              Help
+            </h4>
             <ul className="flex flex-col md:gap-3 gap-1">
               {helpLinks.map((link, index) => (
                 <li key={index}>
@@ -115,15 +122,14 @@ const Footer = () => {
 
           {/* Address Section */}
           <div>
-            <h4 className="font-semibold lg:text-xl md:text-lg text-base md:mb-6 mb-3">Address</h4>
+            <h4 className="font-semibold lg:text-xl md:text-lg text-base md:mb-6 mb-3">
+              Address
+            </h4>
             <div className="flex flex-col md:gap-3 gap-1">
               {addressDetails.map((item, index) => (
                 <div key={index} className="flex items-start gap-2.5">
                   {item.icon}
-                  <span
-                    className="text-[#E9E9EA] hover:text-white transition-colors font-normal lg:text-lg md:text-base text-sm leading-[180%]"
-                   
-                  >
+                  <span className="text-[#E9E9EA] hover:text-white transition-colors font-normal lg:text-lg md:text-base text-sm leading-[180%]">
                     {item.text}
                   </span>
                 </div>
@@ -138,16 +144,10 @@ const Footer = () => {
             © 2025 Dr. Eric Weisbrot . All rights reserved.
           </p>
           <div className="flex gap-2.5">
-            <a
-              href="#"
-              className=" hover:text-white transition-colors text-sm"
-            >
+            <a href="#" className=" hover:text-white transition-colors text-sm">
               Privacy Policy
             </a>
-            <a
-              href="#"
-              className=" hover:text-white transition-colors text-sm"
-            >
+            <a href="#" className=" hover:text-white transition-colors text-sm">
               Terms of Service
             </a>
           </div>
