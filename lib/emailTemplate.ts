@@ -116,7 +116,7 @@ export function generateEmailTemplate(formData: ContactForm | DocumentUploadForm
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td bgcolor="#ffffff" style="padding: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 15px;">
-                <h2 style="margin-top: 0; color: #6366f1;">Sender Details</h2>
+                <h2 style="margin-top: 0; color: #4f46e5;">Sender Details</h2>
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Name:</strong></td>
@@ -139,14 +139,14 @@ export function generateEmailTemplate(formData: ContactForm | DocumentUploadForm
             </tr>
             <tr>
               <td bgcolor="#ffffff" style="padding: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 15px;">
-                <h2 style="margin-top: 0; color: #6366f1;">Message Content</h2>
+                <h2 style="margin-top: 0; color: #4f46e5;">Message Content</h2>
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Subject:</strong></td>
                     <td style="padding: 8px 0;">${messageFormData.subject}</td>
                   </tr>
                 </table>
-                <div style="margin-top: 15px; padding: 15px; background: #f8fafc; border-left: 3px solid #6366f1;">
+                <div style="margin-top: 15px; padding: 15px; background: #f8fafc; border-left: 3px solid #4f46e5;">
                   <p style="margin: 0; font-style: italic;">${messageFormData.message}</p>
                 </div>
               </td>
