@@ -41,9 +41,39 @@ export default function BookConsultation() {
     setIsDropdownOpen(false);
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-    // Handle form submission here
+  const handleSubmit = async () => {
+    try{
+      console.log("Form submitted:", formData);
+      // Handle form submission here
+      const data = {
+        formType: 'contact',
+        formData,
+      }
+      const response = await fetch("/api/submitForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        console.log("Form submitted successfully!");
+        // Reset form fields after successful submission
+        setFormData({
+          name: "",
+          phone: "",
+          service: "",
+        });
+      } else {
+        console.error("Form submission failed.");
+      }
+  
+    }catch(error) {
+      console.log(error)
+    }
+    
+    
   };
 
   return (

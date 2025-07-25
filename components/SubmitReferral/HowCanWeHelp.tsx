@@ -39,9 +39,38 @@ export default function HowCanWeHelp() {
     setValue,
   } = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = async (data: FormData) => {
     console.log(data);
     console.log("Uploaded files:", uploadedFiles);
+
+    const formDataToSend = new FormData();
+    // formDataToSend.append('formType', 'documentUpload');
+    // formDataToSend.append('formData', JSON.stringify(data));
+    formDataToSend.append('firstName', data.firstName);
+    formDataToSend.append('lastName', data.lastName);
+    formDataToSend.append('phone', data.phone);
+    formDataToSend.append('email', data.email);
+    if (uploadedFiles && uploadedFiles.length > 0) {
+      formDataToSend.append('document', uploadedFiles[0]); // Add the uploaded file
+    }
+
+    try {
+      const response = await fetch('/api/sendEmailWithDocument', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        alert('Form submitted and email task queued');
+      } else {
+        alert('Error submitting the form');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Error submitting the form');
+    }
+
   };
 
   const handleDrag = useCallback((e: React.DragEvent) => {
@@ -271,10 +300,11 @@ export default function HowCanWeHelp() {
                     >
                       <input
                         type="file"
-                        multiple
                         onChange={handleFileSelect}
                         className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                         accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                        required
+                      
                       />
 
                       <div className="flex flex-col items-center ">
@@ -286,7 +316,7 @@ export default function HowCanWeHelp() {
                             Browse Files
                           </p>
                           <p className="text-sm text-[#777980] mt-2.5 leading-[180%]">
-                            Drag and drop files here
+                            Drag and drop a file here
                           </p>
                         </div>
                       </div>

@@ -1,0 +1,170 @@
+// lib/emailTemplate.ts
+import { ContactForm, DocumentUploadForm, MessageForm } from './types';
+
+export function generateEmailTemplate(formData: ContactForm | DocumentUploadForm | MessageForm, formType: string): string {
+  if (formType === 'contact') {
+    const contactFormData = formData as ContactForm; // Narrow to ContactForm type
+    return `
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
+      <tr>
+        <td bgcolor="#4f46e5" style="padding: 20px; border-radius: 6px 6px 0 0; color: #ffffff; text-align: center;">
+          <h1 style="margin: 0; font-size: 24px;">Free Consultation Request</h1>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#f9fafb" style="padding: 20px;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td bgcolor="#ffffff" style="padding: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <h2 style="margin-top: 0; color: #4f46e5;">Contact Details</h2>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Name:</strong></td>
+                    <td style="padding: 8px 0;">${contactFormData.name}</td>
+                  </tr>
+                  <tr>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Phone:</strong></td>
+                    <td style="padding: 8px 0;">${contactFormData.phone}</td>
+                  </tr>
+                  <tr>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Service:</strong></td>
+                    <td style="padding: 8px 0;">${contactFormData.service}</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center; padding-top: 20px; color: #9ca3af; font-size: 14px;">
+                <p style="margin: 0;">This email was generated automatically from your website contact form.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  `;
+  }
+
+  if (formType === 'documentUpload') {
+    const documentUploadFormData = formData as DocumentUploadForm; // Narrow to DocumentUploadForm type
+    return `
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
+      <tr>
+        <td bgcolor="#4f46e5" style="padding: 20px; border-radius: 6px 6px 0 0; color: #ffffff; text-align: center;">
+          <h1 style="margin: 0; font-size: 24px;">New Document Submission</h1>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#f9fafb" style="padding: 20px;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td bgcolor="#ffffff" style="padding: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 15px;">
+                <h2 style="margin-top: 0; color: #4f46e5;">User Information</h2>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>First Name:</strong></td>
+                    <td style="padding: 8px 0;">${documentUploadFormData.firstName}</td>
+                  </tr>
+                  <tr>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Last Name:</strong></td>
+                    <td style="padding: 8px 0;">${documentUploadFormData.lastName}</td>
+                  </tr>
+                  <tr>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Email:</strong></td>
+                    <td style="padding: 8px 0;">${documentUploadFormData.email}</td>
+                  </tr>
+                  <tr>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Phone:</strong></td>
+                    <td style="padding: 8px 0;">${documentUploadFormData.phone}</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            ${documentUploadFormData.documents ? `
+            <tr>
+              <td bgcolor="#ffffff" style="padding: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 15px;">
+                <h2 style="margin-top: 0; color: #4f46e5;">Uploaded Documents</h2>
+                <p style="margin: 8px 0; padding: 10px; background: #f3f4f6; border-radius: 4px;">
+                  📄 ${documentUploadFormData.documents.name}
+                </p>
+              </td>
+            </tr>
+            ` : ''}
+            <tr>
+              <td style="text-align: center; padding-top: 20px; color: #9ca3af; font-size: 14px;">
+                <p style="margin: 0;">Please review the attached documents at your earliest convenience.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  `;
+  }
+
+  if (formType === 'message') {
+    const messageFormData = formData as MessageForm; // Narrow to MessageForm type
+    return `
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
+      <tr>
+        <td bgcolor="#6366f1" style="padding: 20px; border-radius: 6px 6px 0 0; color: #ffffff; text-align: center;">
+          <h1 style="margin: 0; font-size: 24px;">New Message Received</h1>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#f9fafb" style="padding: 20px;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td bgcolor="#ffffff" style="padding: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 15px;">
+                <h2 style="margin-top: 0; color: #6366f1;">Sender Details</h2>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Name:</strong></td>
+                    <td style="padding: 8px 0;">${messageFormData.firstName} ${messageFormData.lastName}</td>
+                  </tr>
+                  <tr>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Email:</strong></td>
+                    <td style="padding: 8px 0;">${messageFormData.email}</td>
+                  </tr>
+                  <tr>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Phone:</strong></td>
+                    <td style="padding: 8px 0;">${messageFormData.phone}</td>
+                  </tr>
+                  <tr>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Source:</strong></td>
+                    <td style="padding: 8px 0;">${messageFormData.source}</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#ffffff" style="padding: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 15px;">
+                <h2 style="margin-top: 0; color: #6366f1;">Message Content</h2>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Subject:</strong></td>
+                    <td style="padding: 8px 0;">${messageFormData.subject}</td>
+                  </tr>
+                </table>
+                <div style="margin-top: 15px; padding: 15px; background: #f8fafc; border-left: 3px solid #6366f1;">
+                  <p style="margin: 0; font-style: italic;">${messageFormData.message}</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center; padding-top: 20px; color: #9ca3af; font-size: 14px;">
+                <p style="margin: 0;">Please respond to this inquiry within 24 hours.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  `;
+  }
+
+  return '';
+}
+
+
+// <p><strong>Uploaded Documents:</strong> ${documentUploadFormData.documents ? documentUploadFormData.documents.name : 'No documents uploaded'}</p>

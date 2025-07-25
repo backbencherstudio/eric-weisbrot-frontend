@@ -20,7 +20,7 @@ type FormData = {
   email: string;
   subject: string;
   message: string;
-  howDidYouHear: string;
+  source: string;
 };
 
  const options = [
@@ -48,12 +48,43 @@ export default function ContactUsForm() {
     watch,
   } = useForm<FormData>({
     defaultValues: {
-      howDidYouHear: "Online Search",
+      source: "",
     },
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+  const onSubmit = async (data: FormData) => {
+    try {
+      const formData = {
+        formData: data,
+        formType: 'message'
+      }
+
+      const response = await fetch("/api/submitForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log("Form submitted successfully!");
+        // Reset form fields after successful submission
+        setValue("firstName", "");
+        setValue("lastName", "");
+        setValue("phone", "");
+        setValue("email", "");
+        setValue("subject", "");
+        setValue("message", "");
+        setValue("source", "");
+        setSelectedOptions([])
+      } else {
+        console.error("Form submission failed.");
+      }
+      // Handle form submission here
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleOptionChange = (option: string) => {
@@ -62,8 +93,8 @@ export default function ContactUsForm() {
       : [...selectedOptions, option]
     
     setSelectedOptions(newSelection)
+    setValue("source", newSelection.join(", "))
   }
-console.log(selectedOptions)
 
  
 
