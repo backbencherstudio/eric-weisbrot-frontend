@@ -42,7 +42,7 @@ const helpLinks = [
 const Footer = () => {
   return (
     <footer className="bg-[#070707] text-white">
-      <div className="maxContainer md:pt-[80px] pt-[60px] px-[60px] pb-5">
+      <div className="maxContainer md:pt-[80px] pt-[60px]  pb-5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info Section */}
           <div className="lg:col-span-1 flex flex-col justify-between gap-4">

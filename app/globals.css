@@ -26,8 +26,11 @@
   line-height: 120%; 
   font-size: clamp(28px, 5vw, 48px);
 }
+/* .maxContainer {
+  @apply max-w-[1920px] xl:px-[60px] px-5 mx-auto 
+} */
 .maxContainer {
-  @apply max-w-[1320px] mx-auto 
+  @apply max-w-[1440px] xl:px-[60px] px-5 mx-auto 
 }
 
 @theme inline {
