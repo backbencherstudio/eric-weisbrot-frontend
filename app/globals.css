@@ -27,7 +27,7 @@
   font-size: clamp(28px, 5vw, 48px);
 }
 .maxContainer {
-  @apply max-w-[1920px] mx-auto xl:px-[60px] px-5 
+  @apply max-w-[1320px] mx-auto 
 }
 
 @theme inline {
