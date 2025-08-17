@@ -8,7 +8,7 @@ const HomeBanner = () => {
   return (
     <div className="maxContainer ">
       <div
-        className="bg-no-repeat w-full  rounded-[20px]"
+        className="bg-no-repeat w-full bg-right rounded-[20px]"
         style={{
           backgroundImage: `url("${banner.src}")`,
           backgroundSize: "cover",
@@ -29,7 +29,7 @@ const HomeBanner = () => {
             </span>
           </div>
           <div className="mt-4">
-            <h1 className="xl:text-[64px] lg:text-[46px] md:text-[36px] text-[32px] md:w-[18ch] font-medium leading-[120%] text-white">
+            <h1 className="xl:text-[56px] lg:text-[46px] md:text-[36px] text-[32px] md:w-[18ch] font-medium leading-[120%] text-white">
               Bringing High-Quality Infusions to Every Community 
             </h1>
           </div>
