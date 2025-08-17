@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "@/public/home/doctor-banner2.jpg";
+import banner from "@/public/home/doctor-5.png";
 import ArrowUpIcon from "../Icons/ArrowUpIcon";
 import { Link2 } from "lucide-react";
 import Link from "next/link";
@@ -16,11 +16,11 @@ const HomeBanner = () => {
         }}
       >
         <div
-          className=" flex flex-col max-w-[731px] pl-[64px]"
+          className=" flex flex-col max-w-[731px] pl-[64px] "
           style={{
             paddingTop: `clamp(64px, 10vw, 178px)`,
             paddingBottom: `clamp(64px, 10vw, 178px)`,
-             paddingLeft: `clamp(32px, 5vw, 64px)`
+             paddingLeft: `clamp(32px, 5vw, 64px)`,
           }}
         >
           <div>
@@ -29,7 +29,7 @@ const HomeBanner = () => {
             </span>
           </div>
           <div className="mt-4">
-            <h1 className="lg:text-[64px] md:text-[46px] text-[32px] font-medium leading-[120%] text-white">
+            <h1 className="xl:text-[64px] lg:text-[46px] md:text-[36px] text-[32px] md:w-[18ch] font-medium leading-[120%] text-white">
               Bringing High-Quality Infusions to Every Community 
             </h1>
           </div>

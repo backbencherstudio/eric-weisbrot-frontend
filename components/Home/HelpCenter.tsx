@@ -78,38 +78,38 @@ export default HelpCenter;
 const faqData = [
   {
     id: "item-1",
-    question: "What types of therapy do you offer at Healings?",
+    question: "What is infusion therapy?",
     answer:
-      "Biologic infusion therapy is the process of infusing medication into a vein through a needle or catheter. It is a method of delivering drugs that cannot be taken orally or need to be administered at a controlled rate. At Dr. Eric westbrook all infusion therapies require a physician referral and are overseen by an onsite nurse practitioner.",
+      "Infusion therapy is the administration of medication directly into the vein through an IV line. It is commonly used for conditions where oral medications are not effective or appropriate, such as autoimmune diseases, infections, neurological disorders, or certain cancers. ",
   },
   {
     id: "item-2",
     question: "How do I know if therapy is right for me?",
     answer:
-      "Biologic infusion therapy is the process of infusing medication into a vein through a needle or catheter. It is a method of delivering drugs that cannot be taken orally or need to be administered at a controlled rate. At Dr. Eric westbrook all infusion therapies require a physician referral and are overseen by an onsite nurse practitioner.",
+      "At your first visit, our team will review your medical history, verify your treatment plan, and make sure you are comfortable. Infusions typically take 1–4 hours depending on the medication. You will be closely monitored by trained nurses, and amenities such as Wi-Fi, comfortable seating, and refreshments are available. ",
   },
   {
     id: "item-3",
-    question: "What should I expect during my first therapy session?",
+    question: "Will my insurance cover infusion therapy?",
     answer:
-      "Biologic infusion therapy is the process of infusing medication into a vein through a needle or catheter. It is a method of delivering drugs that cannot be taken orally or need to be administered at a controlled rate. At Dr. Eric westbrook all infusion therapies require a physician referral and are overseen by an onsite nurse practitioner.",
+      "Our team verifies insurance coverage before your treatment begins. We work with most major insurers and handle prior authorizations. Financial counseling is also available if you need help understanding your benefits or exploring assistance programs.",
   },
   {
     id: "item-4",
-    question: "How long does a typical therapy session last?",
+    question: "How do I prepare for my infusion appointment?",
     answer:
-      "Biologic infusion therapy is the process of infusing medication into a vein through a needle or catheter. It is a method of delivering drugs that cannot be taken orally or need to be administered at a controlled rate. At Dr. Eric westbrook all infusion therapies require a physician referral and are overseen by an onsite nurse practitioner.",
+      "We recommend staying hydrated, eating a light meal beforehand, and wearing comfortable clothing with easy access to your arms. Please bring a list of current medications and any required lab results. Some treatments may require that you have a driver — our team will let you know in advance.",
   },
   {
     id: "item-5",
-    question: "Do you offer online or virtual therapy sessions?",
+    question: "How can my provider refer me for infusion therapy? ",
     answer:
-      "Biologic infusion therapy is the process of infusing medication into a vein through a needle or catheter. It is a method of delivering drugs that cannot be taken orally or need to be administered at a controlled rate. At Dr. Eric westbrook all infusion therapies require a physician referral and are overseen by an onsite nurse practitioner.",
+      "Providers can fax, email, or submit referrals securely through our referral portal. Required information usually includes diagnosis, medication orders, recent labs, and prior authorization details. Our team reviews all referrals within 24–48 hours.",
   },
   {
     id: "item-6",
-    question: "How many therapy sessions will I need to see results?",
+    question: "What information do referring providers need to send with a referral?",
     answer:
-      "Biologic infusion therapy is the process of infusing medication into a vein through a needle or catheter. It is a method of delivering drugs that cannot be taken orally or need to be administered at a controlled rate. At Dr. Eric westbrook all infusion therapies require a physician referral and are overseen by an onsite nurse practitioner.",
+      "To avoid delays, providers should include the patient’s demographics, insurance details, medication order (with dose and frequency), recent lab results, and any supporting clinical notes. Our intake team will contact both the provider and patient to schedule the first appointment.",
   },
 ];

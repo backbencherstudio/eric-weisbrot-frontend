@@ -5,7 +5,7 @@ import ArrowUpIcon from "../Icons/ArrowUpIcon";
 
 const AboutUs = () => {
   return (
-    <div className="maxContainer py-[80px]">
+    <div className="maxContainer pt-[80px]">
       <div className=" flex lg:flex-row flex-col xl:gap-12 gap-8">
         <div className="xl:w-[40%] lg:w-[45%]">
           <Image

@@ -33,6 +33,8 @@
   @apply max-w-[1440px] xl:px-[60px] px-5 mx-auto 
 }
 
+
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

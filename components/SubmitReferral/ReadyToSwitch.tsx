@@ -23,7 +23,7 @@ const ReadyToSwitch = () => {
               href="/submit-referral"
               className="btn xl:text-lg lg:text-base "
             >
-              Get Your Consultation
+              Request an appointment
             </Link>
             <Link
               href="/submit-referral"
