@@ -27,7 +27,7 @@ const Counseling = () => {
       <div className="">
         <p className="sectionCategory !w-auto !inline-flex">Our Therapy</p>
         <h1 className="headerText !font-medium text-[#1D1F2C] mt-3">
-          Counseling & Therapy Services
+          Our Infusion Treatments
         </h1>
         <p className="text-[#4A4C56] md:text-base text-sm leading-[180%] mt-4">
           We offer a wide range of services to meet your personal needs
@@ -168,19 +168,18 @@ const StepComponent = () => {
         <div className="md:max-w-[285px]">
           <p className="md:text-base leading-[180%]  text-sm text-[#4A4C56] mt-4">
             Submit completed forms with supporting documentation to orders{" "}
-            <a href="mailto:example@gmail.com" className="text-[#162F73]">
-              example@gmail.com
+            <a href="billing@mdelw.com" className="text-[#162F73]">
+              billing@mdelw.com
             </a>{" "}
-            or submit via our state fax:
           </p>
 
-          <div className="flex flex-col lg:mt-8 mt-6 gap-3">
+          {/* <div className="flex flex-col lg:mt-8 mt-6 gap-3">
             {faxNumbers.map((fax, index) => (
               <p key={index} className="md:text-base text-sm font-medium leadint-[180%] text-[#1D1F2C] ">
                 {fax.state}: <span className="text-[#4A4C56] leading-[180%] md:text-base text-sm">{fax.number}</span>
               </p>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

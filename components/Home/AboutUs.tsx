@@ -53,14 +53,14 @@ const AboutUs = () => {
               to individual patient needs.
             </p>
           </div>
-          <div className="flex items-center lg:mt-8 mt-5">
+          {/* <div className="flex items-center lg:mt-8 mt-5">
             <button className="btn xl:text-lg lg:text-base ">
               Learn More
             </button>
             <span className="bgPrimary w-[52px] h-[52px] rounded-full flex items-center justify-center">
               <ArrowUpIcon />
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

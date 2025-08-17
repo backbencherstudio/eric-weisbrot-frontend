@@ -7,10 +7,10 @@ const OurCondition = () => {
         <div className="">
           <p className="sectionCategory !w-auto !inline-flex">Our Conditions</p>
           <h1 className="headerText !font-medium text-[#1D1F2C] mt-3">
-            Conditions
+            Condition & Therapies 
           </h1>
           <p className="text-[#4A4C56] md:text-base text-sm leading-[180%] mt-4">
-            We offer a wide range of services to meet your personal needs
+            Infusion therapy helps treat conditions where oral medications aren’t effective, including autoimmune disorders like rheumatoid arthritis, Crohn’s disease, multiple sclerosis, and lupus. It is also used for osteoporosis, chronic infections, and certain neurological conditions. Common therapies include biologics, antibiotics, hydration, and immune-modulating medications—delivered directly into the bloodstream for faster, more effective results. Each treatment plan is personalized, with patients carefully monitored to ensure safety and comfort. 
           </p>
         </div>
         <div>
@@ -227,7 +227,7 @@ const GoutIcon = () => (
 const medicalConditions = [
   {
     id: 1,
-    name: "Alzheimer's Disease",
+    name: "Alzheimer’s Disease",
     icon: <AlzeimarIcon />,
   },
   {
@@ -237,17 +237,17 @@ const medicalConditions = [
   },
   {
     id: 3,
-    name: "Chronic Migraines",
+    name: "Chronic Migraines ",
     icon: <FabryDiseaseIcon />,
   },
   {
     id: 4,
-    name: "Fabry Disease",
+    name: "Fabry Disease ",
     icon: <GaucherDisease />,
   },
   {
     id: 5,
-    name: "Gaucher Disease",
+    name: "Gaucher Disease ",
     icon: <GoutIcon />,
   },
   { id: 6, name: "Gout", icon: <ChronicIcon /> },
@@ -271,42 +271,33 @@ const medicalConditions = [
   },
   {
     id: 11,
-    name: "Alzheimer's Disease",
+    name: "Psoriatic Arthritis",
     icon: <MedicalIcon />,
   },
   {
     id: 12,
-    name: "Psoriatic Arthritis",
+    name: "Psoriasis",
     icon: <GaucherDisease />,
   },
   {
     id: 13,
-    name: "Lupsoriasiaspus",
+    name: "Rheumatoid Arthritis",
     icon: <AlzeimarIcon />,
   },
   {
     id: 14,
-    name: "Psoriasis",
+    name: "Severe Asthma",
     icon: <MedicalIcon />,
   },
   {
     id: 15,
-    name: "Rheumatoid Arthritis",
+    name: "Thyroid Eye Disease",
     icon: <ChronicIcon />,
   },
   {
     id: 16,
-    name: "Severe Asthma",
+    name: "Ulcerative Colitis",
     icon: <AlzeimarIcon />,
   },
-  {
-    id: 17,
-    name: "Thyroid Eye Disease",
-    icon: <FabryDiseaseIcon />,
-  },
-  {
-    id: 18,
-    name: "Ulcerative Colitis",
-    icon: <ChronicIcon />,
-  },
+
 ];

@@ -100,14 +100,14 @@ const patientsCare = [
     img: img1,
     header: "Intensive Caring",
     description:
-      "Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corperturet suscipit lobortis feugiat nulla facilisis at vero eros et accumsan nisl est usus legentis in iis qui facit eorum claritatem autem vel eum iriure.Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis feugiat nulla facilisis at vero eros et accumsan nisl est usus legentis in iis qui facit eorum claritatem autem vel eum iriure",
+      "At Dr. Eric Weisbrot’s infusion clinic, we understand that beginning infusion therapy can feel overwhelming, especially if it’s your first time. To help ease the process, we’ve compiled answers to the most common questions patients ask. From what to expect during your first visit to how to prepare for your appointment, these FAQs are designed to give you clear, reassuring information so you can feel confident about your treatment. Our team is committed to making every visit as comfortable and stress-free as possible, with trained nurses available to guide you through each step. ",
   },
   {
     id: "item-2",
     img: img2,
     header: "Best of Care",
     description:
-      "Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis feugiat nulla facilisis at vero eros et accumsan nisl est usus legentis in iis qui facit eorum claritatem autem vel eum iriure.Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis feugiat nulla facilisis at vero eros et accumsan nisl est usus legentis in iis qui facit eorum claritatem autem vel eum iriure",
+      "In addition to addressing patient concerns, our FAQ page also supports families and caregivers who want to know more about the process. You’ll find helpful details on insurance coverage, appointment preparation, and what happens during and after an infusion session. We encourage patients to reach out with any additional questions—our team believes no concern is too small when it comes to your health and comfort. By providing easy-to-understand information, Dr. Weisbrot’s practice ensures that every patient feels supported, informed, and cared for throughout their infusion therapy journey. ",
   },
 ];
 
@@ -116,37 +116,37 @@ const faqData = [
     id: "item-1",
     question: "What is Infusion Therapy?",
     answer:
-      "Biologic infusion therapy is the process of infusing medication into a vein through a needle or catheter. It is a method of delivering drugs that cannot be taken orally or need to be administered at a controlled rate. At Dr. Eric Weltdend, all infusion therapies require a physician referral and are overseen by an onsite nurse practitioner.",
+      "Infusion therapy is the administration of medication directly into the vein through an IV line. It is commonly used for conditions where oral medications are not effective or appropriate, such as autoimmune diseases, infections, neurological disorders, or certain cancers. ",
   },
   {
     id: "item-2",
-    question: "Do I need a physician referral?",
+    question: "What should I expect during my first infusion?",
     answer:
-      "Biologic infusion therapy is the process of infusing medication into a vein through a needle or catheter. It is a method of delivering drugs that cannot be taken orally or need to be administered at a controlled rate. At Dr. Eric Weltdend, all infusion therapies require a physician referral and are overseen by an onsite nurse practitioner.",
+      "At your first visit, our team will review your medical history, verify your treatment plan, and make sure you are comfortable. Infusions typically take 1–4 hours depending on the medication. You will be closely monitored by trained nurses, and amenities such as Wi-Fi, comfortable seating, and refreshments are available.",
   },
   {
     id: "item-3",
-    question: "Where are your centers located?",
+    question: "Will my insurance cover infusion therapy?",
     answer:
-      "Biologic infusion therapy is the process of infusing medication into a vein through a needle or catheter. It is a method of delivering drugs that cannot be taken orally or need to be administered at a controlled rate. At Dr. Eric Weltdend, all infusion therapies require a physician referral and are overseen by an onsite nurse practitioner.",
+      "Our team verifies insurance coverage before your treatment begins. We work with most major insurers and handle prior authorizations. Financial counseling is also available if you need help understanding your benefits or exploring assistance programs. ",
   },
   {
     id: "item-4",
-    question: "Does Dr. Eric Weltdend offer private infusions?",
+    question: "How do I prepare for my infusion appointment?",
     answer:
-      "Biologic infusion therapy is the process of infusing medication into a vein through a needle or catheter. It is a method of delivering drugs that cannot be taken orally or need to be administered at a controlled rate. At Dr. Eric Weltdend, all infusion therapies require a physician referral and are overseen by an onsite nurse practitioner.",
+      "We recommend staying hydrated, eating a light meal beforehand, and wearing comfortable clothing with easy access to your arms. Please bring a list of current medications and any required lab results. Some treatments may require that you have a driver — our team will let you know in advance. ",
   },
   {
     id: "item-5",
-    question: "What wellness infusions does Dr. Eric Weltdend provide?",
+    question: "How can my provider refer me for infusion therapy?",
     answer:
-      "Biologic infusion therapy is the process of infusing medication into a vein through a needle or catheter. It is a method of delivering drugs that cannot be taken orally or need to be administered at a controlled rate. At Dr. Eric Weltdend, all infusion therapies require a physician referral and are overseen by an onsite nurse practitioner.",
+      "Providers can fax, email, or submit referrals securely through our referral portal. Required information usually includes diagnosis, medication orders, recent labs, and prior authorization details. Our team reviews all referrals within 24–48 hours. ",
   },
   {
     id: "item-6",
-    question: "What is my out-of-pocket cost for my infusion?",
+    question: "What information do referring providers need to send with a referral?",
     answer:
-      "Biologic infusion therapy is the process of infusing medication into a vein through a needle or catheter. It is a method of delivering drugs that cannot be taken orally or need to be administered at a controlled rate. At Dr. Eric Weltdend, all infusion therapies require a physician referral and are overseen by an onsite nurse practitioner.",
+      "To avoid delays, providers should include the patient’s demographics, insurance details, medication order (with dose and frequency), recent lab results, and any supporting clinical notes. Our intake team will contact both the provider and patient to schedule the first appointment. ",
   },
   {
     id: "item-7",

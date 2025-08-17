@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "@/public/home/banner.png";
+import banner from "@/public/home/doctor-banner2.jpg";
 import ArrowUpIcon from "../Icons/ArrowUpIcon";
 import { Link2 } from "lucide-react";
 import Link from "next/link";
@@ -30,7 +30,7 @@ const HomeBanner = () => {
           </div>
           <div className="mt-4">
             <h1 className="lg:text-[64px] md:text-[46px] text-[32px] font-medium leading-[120%] text-white">
-              Improving Access to High-Quality Infusion Services
+              Bringing High-Quality Infusions to Every Community 
             </h1>
           </div>
           <div className="flex items-center mt-2.5">
