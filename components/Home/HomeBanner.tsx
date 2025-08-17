@@ -16,7 +16,7 @@ const HomeBanner = () => {
         }}
       >
         <div
-          className=" flex flex-col max-w-[731px] pl-[64px] "
+          className=" flex flex-col max-w-[731px] pl-[54px] "
           style={{
             paddingTop: `clamp(64px, 10vw, 178px)`,
             paddingBottom: `clamp(64px, 10vw, 178px)`,
