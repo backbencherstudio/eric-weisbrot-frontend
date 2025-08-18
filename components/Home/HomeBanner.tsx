@@ -20,7 +20,7 @@ const HomeBanner = () => {
           style={{
             paddingTop: `clamp(64px, 10vw, 178px)`,
             paddingBottom: `clamp(64px, 10vw, 178px)`,
-             paddingLeft: `clamp(32px, 5vw, 64px)`,
+             paddingLeft: `clamp(32px, 5vw, 54px)`,
           }}
         >
           <div>
