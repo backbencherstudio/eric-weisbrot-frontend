@@ -188,7 +188,7 @@ const StepComponent = ({link}) => {
 };
 
 const medications = [
-  { id: 1, name: "Actemra", content: <StepComponent link = "https://f.hubspotusercontent00.net/hubfs/1924704/Order%20Form%20Download/ACTEMRA%20(2).pdf?__hstc=251652889.d531e324b4807983771fafec0198d9e8.1755486655279.1755486655279.1755570693097.2&__hssc=251652889.33.1755655370783&__hsfp=2999528318" />,  },
+  { id: 1, name: "Actemra", content: <StepComponent link = "/pdfs/ACTEMRA.pdf" />,  },
   { id: 2, name: "Benlysta", content: <StepComponent link = "https://f.hubspotusercontent00.net/hubfs/1924704/Order%20Form%20Download/Benlysta%20updated%201021.pdf?__hstc=251652889.d531e324b4807983771fafec0198d9e8.1755486655279.1755486655279.1755570693097.2&__hssc=251652889.3333.1755655370783&__hsfp=2999528318"  />,},
   { id: 3, name: "Cimzia", content: <StepComponent link= "https://cdn2.hubspot.net/hubfs/1924704/Order%20Form%20Download/Cimzia%20p1.6.pdf?__hstc=251652889.d531e324b4807983771fafec0198d9e8.1755486655279.1755486655279.1755570693097.2&__hssc=251652889.333.1755655370783&__hsfp=2999528318" />, },
   { id: 4, name: "Cinqair", content: <StepComponent link = "https://f.hubspotusercontent00.net/hubfs/1924704/Order%20Form%20Download/Cinqair.pdf?__hstc=251652889.d531e324b4807983771fafec0198d9e8.1755486655279.1755486655279.1755570693097.2&__hssc=251652889.33333.1755655370783&__hsfp=2999528318" />, },
