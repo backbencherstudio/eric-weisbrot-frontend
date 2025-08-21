@@ -29,14 +29,15 @@ export default function RootLayout({
 
         </div>
         <Footer />
-          <Script
+          {/* <Script
           strategy="afterInteractive" // Ensures the script is loaded after the page is interactive
           src="https://acsbapp.com/apps/app/dist/js/app.js"
           onLoad={() => {
-            // Initialize the script once it's loaded
-            acsbJS.init();
+            if (typeof window !== 'undefined' && window.acsbJS) {
+              window.acsbJS.init();
+            }
           }}
-        />
+        /> */}
       </body>
     </html>
   );
