@@ -24,7 +24,7 @@ const TopBar = () => {
                 Order Forms
               </Link>
               <MessageIcon className="md:w-6 w-4 md:h-6 h-4" />
-              <span className="">billing@mdelw.com</span>
+              <a href="mailto:billing@mdelw.com" className="">billing@mdelw.com</a>
             </div>
           </div>
         </div>

@@ -3,9 +3,9 @@ import React from "react";
 
 const ReuseableBanner = ({banner,text}) => {
   return (
-    <div className="maxContainer">
+    <div className="">
       <div
-        className="bg-no-repeat w-full bg-top 2xl:bg-center  rounded-[20px] text-white font-semibold text-center lg:text-[56px]"
+        className="bg-no-repeat w-full bg-top 2xl:bg-center   text-white font-semibold text-center lg:text-[56px]"
         style={{
           backgroundImage: `url("${banner.src}")`,
           backgroundSize: "cover",

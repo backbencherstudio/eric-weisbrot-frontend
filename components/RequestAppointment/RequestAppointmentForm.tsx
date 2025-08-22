@@ -37,7 +37,7 @@ type FormData = {
     "Other"
   ]
 
-export default function ContactUsForm() {
+export default function RequestAppointmentForm() {
    const [selectedOptions, setSelectedOptions] = useState<string[]>([])
 
   const {
@@ -53,6 +53,7 @@ export default function ContactUsForm() {
   });
 
   const onSubmit = async (data: FormData) => {
+    console.log(data,"daat")
     try {
       const formData = {
         formData: data,
@@ -102,7 +103,7 @@ export default function ContactUsForm() {
     <div className="maxContainer md:my-[100px] my-[60px]">
       <div className="">
         <div className="flex flex-col gap-[15px] justify-center items-center mb-[15px] text-center">
-        <h1 className="headerText text-[#161721] !font-semibold">How Can We Help?</h1>
+        <h1 className="headerText text-[#161721] !font-semibold">Request an Appointment</h1>
         <p className="text-[#4A4C56] leading-[180%]">
           Have a question? Send us a message, and we'll get right back to you.
         </p>
@@ -120,12 +121,12 @@ export default function ContactUsForm() {
                   htmlFor="firstName"
                   className="text-[#4A4C56] lg:text-xl md:text-lg text-base leading-[180%] block font-medium mb-1.5"
                 >
-                  First Name<span className="text-red-500">*</span>
+                  Patient Name<span className="text-red-500">*</span>
                 </label>
                 <input
                   id="firstName"
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder="First Name"
                   {...register("firstName", {
                     required: "First name is required",
                   })}
@@ -141,14 +142,14 @@ export default function ContactUsForm() {
               <div>
                 <label
                   htmlFor="lastName"
-                  className="text-[#4A4C56] lg:text-xl md:text-lg text-base leading-[180%] block font-medium mb-1.5"
+                  className="text-[#4A4C56] block opacity-0 lg:text-xl md:text-lg text-base leading-[180%]  font-medium mb-1.5"
                 >
                   Last Name
                 </label>
                 <input
                   id="lastName"
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder="Last Name"
                   {...register("lastName")}
                   className="w-full rounded-md border bg-[#F3F6FC] border-[#E9E9EA] xl:py-[15px] py-3 px-3 focus:ring-1 focus:ring-[#162F73] focus:border-transparent text-[#4A4C56] leading-[160%] outline-none lg:text-base text-sm "
                 />

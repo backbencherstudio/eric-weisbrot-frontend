@@ -185,7 +185,7 @@ export default function HowCanWeHelp() {
                       htmlFor="firstName"
                       className="text-[#4A4C56] xl:text-lg text-base font-normal leading-[180%] block"
                     >
-                      First Name
+                      First Name<span className="text-red-500">*</span>
                     </label>
                     <input
                       id="firstName"
@@ -214,16 +214,14 @@ export default function HowCanWeHelp() {
                       id="lastName"
                       type="text"
                       placeholder="Enter your name"
-                      {...register("lastName", {
-                        required: "Last name is required",
-                      })}
+                      {...register("lastName")}
                       className="mt-1.5 w-full rounded-md border border-[#E9E9EA] bg-white xl:py-[15px] py-3 px-3 focus:ring-1 focus:ring-[#162F73] focus:border-transparent text-[#4A4C56] outline-none text-sm leading-[180%]"
                     />
-                    {errors.lastName && (
+                    {/* {errors.lastName && (
                       <p className="mt-1 text-sm text-red-600">
                         {errors.lastName.message}
                       </p>
-                    )}
+                    )} */}
                   </div>
                 </div>
 
@@ -234,7 +232,7 @@ export default function HowCanWeHelp() {
                       htmlFor="phone"
                       className="text-[#4A4C56] xl:text-lg text-base font-normal leading-[180%] block"
                     >
-                      Phone
+                      Phone<span className="text-red-500">*</span>
                     </label>
                     <input
                       id="phone"
@@ -264,7 +262,6 @@ export default function HowCanWeHelp() {
                       type="email"
                       placeholder="Enter your name"
                       {...register("email", {
-                        required: "Email is required",
                         pattern: {
                           value: /^\S+@\S+$/i,
                           message: "Invalid email address",
@@ -283,7 +280,7 @@ export default function HowCanWeHelp() {
                 {/* Upload Documents */}
                 <div>
                   <label className="text-[#4A4C56] xl:text-lg text-base font-normal leading-[180%] block">
-                    Upload documents
+                    Upload documents<span className="text-red-500">*</span>
                   </label>
 
                   <div className="mt-1.5">

@@ -11,16 +11,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 const quicklink = [
-  { text: "Therapies", href: "#" },
-  { text: "Find a Location", href: "#" },
-  { text: "Contact Us", href: "#" },
-  { text: "Request an Appointment", href: "#" },
+  { text: "Therapies", href: "/conditions-therapies" },
+  { text: "Find a Location", href: "https://www.google.com/maps/place/Eric+L.+Weisbrot,+M.D./@39.3217698,-76.6658318,12.75z/data=!4m10!1m2!2m1!1sdr+weisbrot!3m6!1s0x89c80496b60e0bf3:0xe52f6839c1a467dc!8m2!3d39.3017949!4d-76.6129412!15sCgtkciB3ZWlzYnJvdFoNIgtkciB3ZWlzYnJvdJIBGWZhbWlseV9wcmFjdGljZV9waHlzaWNpYW6aASRDaGREU1VoTk1HOW5TMFZPWDFweFQwOWZNVXd6VkROQlJSQUKqAUEKCy9nLzF2X3o5d2JzEAEyHxABIhuMOZ0bwxZYpcDUkCFaQ3Bt9hfPPXLkmLOHJmgyDxACIgtkciB3ZWlzYnJvdOABAPoBBAgAEBk!16s%2Fg%2F1v_z9wbs?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D" },
+  { text: "Contact Us", href: "/contact-us" },
+  { text: "Request an Appointment", href: "/request-an-appointment" },
 ];
 
 const addressDetails = [
   {
     icon: <MessageIcon className="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" />,
-    text: "billing@mdelw.com",
+    text: <a href="mailto:billing@mdelw.com" className="">billing@mdelw.com</a>,
   },
   {
     icon: <CallIcon className="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" />,
@@ -43,9 +43,9 @@ const Footer = () => {
   return (
     <footer className="bg-[#070707] text-white">
       <div className="maxContainer md:pt-[80px] pt-[60px]  pb-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info Section */}
-          <div className="lg:col-span-1 flex flex-col justify-between gap-4">
+          <div className="lg:col-span-1 flex flex-col justify-between gap-4 ">
             <div className="">
               <div className="w-[190px] h-[66px]">
                 <Link href="/">
@@ -82,26 +82,45 @@ const Footer = () => {
           </div>
 
           {/* Quick Links Section */}
-          <div>
-            <h4 className="font-semibold lg:text-xl md:text-lg text-base md:mb-6 mb-3">
+          <div className="  lg:flex lg:mx-auto">
+            <div className="flex flex-col  w-full">
+              <h4 className="font-semibold lg:text-xl md:text-lg text-base md:mb-6 mb-3">
               Quick Links
             </h4>
             <ul className="flex flex-col md:gap-3 gap-1">
               {quicklink.map((link, index) => (
                 <li key={index}>
-                  <a
+                  {/* <Link
                     href={link.href}
                     className="text-[#E9E9EA] hover:text-white transition-colors font-normal lg:text-lg md:text-base text-sm leading-[180%]"
                   >
                     {link.text}
-                  </a>
+                  </Link> */}
+                   {link.text === "Find a Location" ? (
+      <a
+        href={link.href}
+        className="text-[#E9E9EA] hover:text-white transition-colors font-normal lg:text-lg md:text-base text-sm leading-[180%]"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {link.text}
+      </a>
+    ) : (
+      <Link
+        href={link.href}
+        className="text-[#E9E9EA] hover:text-white transition-colors font-normal lg:text-lg md:text-base text-sm leading-[180%]"
+      >
+        {link.text}
+      </Link>
+    )}
                 </li>
               ))}
             </ul>
+            </div>
           </div>
 
           {/* Help Section */}
-          <div>
+          {/* <div>
             <h4 className="font-semibold lg:text-xl md:text-lg text-base md:mb-6 mb-3">
               Help
             </h4>
@@ -117,11 +136,12 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Address Section */}
-          <div>
-            <h4 className="font-semibold lg:text-xl md:text-lg text-base md:mb-6 mb-3">
+          <div className=" lg:flex lg:mx-auto">
+            <div>
+              <h4 className="font-semibold lg:text-xl md:text-lg text-base md:mb-6 mb-3">
               Address
             </h4>
             <div className="flex flex-col md:gap-3 gap-1">
@@ -133,6 +153,7 @@ const Footer = () => {
                   </span>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </div>
