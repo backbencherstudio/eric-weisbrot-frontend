@@ -12,6 +12,7 @@ import { Check } from "lucide-react";
 import { useState } from "react";
 import SelectedIcon from "../Icons/SelectedIcon";
 import UnSelectedIcon from "../Icons/UnSelectedIcon";
+import { Calendar22 } from "./BirthCalender";
 
 type FormData = {
     firstName: string;
@@ -23,6 +24,7 @@ type FormData = {
     source?: string;
     therapies:string;
     conditions:string;
+    dateOfBirth?: Date; 
 };
 
 const options = [
@@ -56,7 +58,7 @@ export default function RequestAppointmentForm() {
     });
 
     const onSubmit = async (data: FormData) => {
-        console.log(data, "daat")
+        console.log(data, "daata-------------")
         try {
             const formData = {
                 formData: data,
@@ -227,6 +229,14 @@ export default function RequestAppointmentForm() {
                                     ))}
                                 </SelectContent>
                             </Select>
+                        </div>
+
+                        <div className=""> 
+                             <label className="text-[#4A4C56] lg:text-xl md:text-lg text-base leading-[180%] block font-semibold mb-1.5">
+                                Date of birth
+                            </label>
+                            <Calendar22   value={watch("dateOfBirth")}
+        onChange={(date) => setValue("dateOfBirth", date)}  />
                         </div>
                         {/* therapy */}
                         <div>
