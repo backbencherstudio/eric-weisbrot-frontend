@@ -24,7 +24,7 @@ const addressDetails = [
   },
   {
     icon: <CallIcon className="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" />,
-    text: "+1410-637-8255",
+    text: "410-637-8255",
   },
   {
     icon: <LocationIcon className="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" />,

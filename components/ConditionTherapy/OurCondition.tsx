@@ -7,8 +7,19 @@ import AlzeimerIcon from "../Icons/AlzeimerIcon";
 import MedicalIcon from "../Icons/MedicalIcon";
 
 const OurCondition = () => {
+
+  //  if (typeof window !== 'undefined') {
+  //     const element = document.getElementById("ourCondition");
+  //     if (element) {
+  //        window.scrollTo({
+  //         top: element.offsetTop,
+  //         behavior: "smooth",
+  //       });
+  //     }
+  //   }
+
   return (
-    <div>
+    <div id="ourCondition">
       <div className="maxContainer md:py-[100px] py-[60px]">
         <div className="">
           <p className="sectionCategory !w-auto !inline-flex">Our Conditions</p>

@@ -7,6 +7,8 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+
 .poppins {
   font-family: "Poppins", sans-serif;
 }

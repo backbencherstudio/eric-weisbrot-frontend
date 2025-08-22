@@ -165,7 +165,7 @@ const StepComponent = ({link}) => {
           Step 2:
         </h2>
         <p className="md:text-xl text-lg font-medium leading-[180%]">
-           Fax or Submit forms to Dr. Weisbrot via fax <span  className="text-[#162F73]">(+1410-637-8255)</span>  or email <br />
+           Fax or Submit forms to Dr. Weisbrot via fax <span  className="text-[#162F73]">(410-637-8255)</span>  or email <br />
             <span  className="text-[#162F73]">
               billing@mdelw.com
             </span>{" "}
