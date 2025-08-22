@@ -261,6 +261,9 @@ export default function ContactUsForm() {
 
             {/* How did you hear about us */}
             <div className="py-3.5 px-4 bg-[#F3F6FC] border border-[#E9E9EA]  rounded-md ">
+              <label className="text-[#4A4C56] lg:text-xl md:text-lg text-base leading-[180%] block font-semibold mb-1.5">
+                                How did you hear about us?
+                            </label>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3  max-w-[660px]">
                 {options.map((option) => (
                   <div key={option} className="relative">
