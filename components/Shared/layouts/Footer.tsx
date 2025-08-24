@@ -1,3 +1,4 @@
+"use client"
 import CallIcon from "@/components/Icons/CallIcon";
 import FacebookIcon from "@/components/Icons/FacebookIcon";
 import InstaIcon from "@/components/Icons/InstaIcon";
@@ -9,6 +10,8 @@ import React from "react";
 import logo from "@/public/logoFooter.png";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 
 const quicklink = [
   { text: "Therapies", href: "/conditions-therapies" },
@@ -40,9 +43,16 @@ const helpLinks = [
 ];
 
 const Footer = () => {
+  
+  const pathname = usePathname()
+
+  const isBannerNotAvailable =  pathname.includes("/conditions-therapies") ||
+  pathname.includes("/about-us") ||
+  pathname.includes("/submit-referral");
+
   return (
-    <footer className="bg-[#070707] text-white">
-      <div className="maxContainer md:pt-[80px] pt-[60px]  pb-5">
+    <footer className={`bg-[#070707] text-white ${!isBannerNotAvailable && "md:rounded-t-3xl rounded-t-2xl"} `}>
+      <div className={`maxContainer ${!isBannerNotAvailable ? "md:pt-[155px] pt-[110px]" : "md:pt-[80px] pt-[60px]"}   pb-5`}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info Section */}
           <div className="lg:col-span-1 flex flex-col justify-between gap-4 ">
