@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
+import Link from "next/link";
 
 const Counseling = () => {
   const [openItems, setOpenItems] = useState(new Set());
@@ -156,7 +157,7 @@ const StepComponent = ({link}) => {
   <button className="btn md:mt-5 mt-4">Download</button>
 </a>
         <p className="md:text-base text-sm mt-4  leading-[180%] ">
-          Or use our online order submission <br /> process
+          Or use our <Link href="/submit-referral" className="text-[#162F73] font-semibold">online order submission</Link> <br /> process
         </p>
       </div>
 
@@ -167,7 +168,7 @@ const StepComponent = ({link}) => {
         <p className="md:text-xl text-lg font-medium leading-[180%]">
            Fax or Submit forms to Dr. Weisbrot via fax <span  className="text-[#162F73]">(410-637-8255)</span>  or email <br />
             <span  className="text-[#162F73]">
-              billing@mdelw.com
+              <a href="mailto:billing@mdelw.com" className="">billing@mdelw.com</a>
             </span>{" "}
         </p>
         <div className="md:max-w-[285px]">

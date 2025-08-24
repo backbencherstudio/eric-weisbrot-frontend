@@ -32,7 +32,7 @@ export function Calendar22({ value, onChange }: Calendar22Props) {
             <span className={value ? "text-[#4A4C56]" : "text-[#9CA3AF]"}>
               {value ? value.toLocaleDateString() : "Select date of birth"}
             </span>
-            <ChevronDownIcon className="ml-auto h-4 w-4 shrink-0 opacity-50" />
+            <ChevronDownIcon className="ml-auto size-6 shrink-0 opacity-50" />
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-auto overflow-hidden p-0" align="start">

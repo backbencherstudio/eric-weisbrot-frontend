@@ -7,6 +7,7 @@ import Navbar from "@/components/Shared/layouts/Navbar";
 import Footer from "@/components/Shared/layouts/Footer";
 import AccessiBeWidget from "@/components/Widget/accessibe-widget";
 import Script from "next/script";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: AppConfig().app.name,
@@ -25,7 +26,9 @@ export default function RootLayout({
         <Navbar />
         {children}
           <AccessiBeWidget licenseKey={process.env.NEXT_PUBLIC_ACCESSIBE_LICENSE_KEY} />
+          
         <Footer />
+        <Toaster position="top-right" richColors/>
       </body>
     </html>
   );

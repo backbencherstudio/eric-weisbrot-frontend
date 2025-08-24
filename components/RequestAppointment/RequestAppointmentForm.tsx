@@ -13,6 +13,7 @@ import { useState } from "react";
 import SelectedIcon from "../Icons/SelectedIcon";
 import UnSelectedIcon from "../Icons/UnSelectedIcon";
 import { Calendar22 } from "./BirthCalender";
+import { toast } from "sonner";
 
 type FormData = {
     firstName: string;
@@ -58,7 +59,11 @@ export default function RequestAppointmentForm() {
     });
 
     const onSubmit = async (data: FormData) => {
+        if(!data?.dateOfBirth){
+            return toast.error("Date of birth is missing")
+        }
         console.log(data, "daata-------------")
+
         try {
             const formData = {
                 formData: data,
@@ -233,7 +238,7 @@ export default function RequestAppointmentForm() {
 
                         <div className=""> 
                              <label className="text-[#4A4C56] lg:text-xl md:text-lg text-base leading-[180%] block font-semibold mb-1.5">
-                                Date of birth
+                                Date of birth<span className="text-red-500">*</span>
                             </label>
                             <Calendar22   value={watch("dateOfBirth")}
         onChange={(date) => setValue("dateOfBirth", date)}  />

@@ -12,6 +12,7 @@ import { Check } from "lucide-react";
 import { useState } from "react";
 import SelectedIcon from "../Icons/SelectedIcon";
 import UnSelectedIcon from "../Icons/UnSelectedIcon";
+import { toast } from "sonner";
 
 type FormData = {
   firstName: string;
@@ -53,6 +54,11 @@ export default function ContactUsForm() {
   });
 
   const onSubmit = async (data: FormData) => {
+
+     if(!data?.subject){
+                return toast.error("Oops! Looks like you forgot to tell us who you are.")
+            }
+
     try {
       const formData = {
         formData: data,
@@ -222,7 +228,7 @@ export default function ContactUsForm() {
                 defaultValue=""
               >
                 <SelectTrigger className="w-full rounded-md border bg-[#F3F6FC] border-[#E9E9EA] !xl:py-[15px] !py-3 px-3 focus:ring-1 focus:ring-[#162F73] focus:border-transparent text-[#4A4C56] leading-[160%] outline-none lg:text-base text-sm !h-[56px] cursor-pointer">
-                  <SelectValue placeholder="Select a subject" className="" />
+                  <SelectValue placeholder="Please Select" className="" />
                 </SelectTrigger>
                 <SelectContent >
                   <SelectItem className=" md:text-lg text-base " value="Patient">
