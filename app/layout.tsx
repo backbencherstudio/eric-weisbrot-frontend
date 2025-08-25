@@ -26,7 +26,7 @@ export default function RootLayout({
         <TopBar/>
         <Navbar />
         {children}
-          {/* <AccessiBeWidget licenseKey={process.env.NEXT_PUBLIC_ACCESSIBE_LICENSE_KEY} /> */}
+          <AccessiBeWidget licenseKey={process.env.NEXT_PUBLIC_ACCESSIBE_LICENSE_KEY} />
           <FooterBanner/>
         <Footer />
         <Toaster position="top-right" richColors/>
