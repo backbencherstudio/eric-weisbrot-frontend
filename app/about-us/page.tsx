@@ -1,6 +1,6 @@
 import ReuseableBanner from '@/components/Reusable/ReuseableBanner';
 import React from 'react';
-import banner from "@/public/about-us/about-banner.png"
+import banner from "@/public/home/raw-image/about-us2.jpg"
 import ReadyToSwitch from '@/components/SubmitReferral/ReadyToSwitch';
 import AboutUsMainContent from '@/components/AboutUs/AboutUsMainContent';
 

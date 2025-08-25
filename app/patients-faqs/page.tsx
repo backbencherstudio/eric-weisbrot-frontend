@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from "@/public/patients-faqs/patientsFaqsBanner.png"
+import banner from "@/public/home/raw-image/patient-faqs.jpg"
 import ReuseableBanner from '@/components/Reusable/ReuseableBanner';
 import PatientsMainSection from '@/components/PatientsFaqs/PatientsMainSection';
 import HelpCenter from '@/components/Home/HelpCenter';

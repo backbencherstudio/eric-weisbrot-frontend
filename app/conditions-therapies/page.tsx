@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from "@/public/conditon/conditionbanner.png"
+import banner from "@/public/home/black-nurse2.jpg"
 import ReuseableBanner from '@/components/Reusable/ReuseableBanner';
 import ReadyToSwitch from '@/components/SubmitReferral/ReadyToSwitch';
 import OurCondition from '@/components/ConditionTherapy/OurCondition';
