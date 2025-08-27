@@ -1,13 +1,15 @@
 import { emailQueue } from '@/lib/queue'; // Import the email queue
-import { ContactForm, DocumentUploadForm, MessageForm } from '@/lib/types';
+import { AppointmentForm, ContactForm, DocumentUploadForm, MessageForm } from '@/lib/types';
 
 export async function POST(req: Request) {
-  const { formType, formData }: { formType: string, formData: ContactForm | DocumentUploadForm | MessageForm } = await req.json();
+  const { formType, formData }: { formType: string, formData: ContactForm | DocumentUploadForm | MessageForm | AppointmentForm } = await req.json();
 
-  const validFormTypes = ['contact', 'documentUpload', 'message'];
+  const validFormTypes = ['contact', 'documentUpload', 'message', 'appointment'];
   if (!validFormTypes.includes(formType)) {
     return new Response(JSON.stringify({ success: false, message: 'Invalid form type' }), { status: 400 });
   }
+
+  // console.log('formData', formData, formType)
 
   try {
     // Add email task to the queue

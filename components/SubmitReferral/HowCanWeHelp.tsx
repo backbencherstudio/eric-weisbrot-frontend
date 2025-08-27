@@ -54,6 +54,7 @@ export default function HowCanWeHelp() {
       formDataToSend.append('document', uploadedFiles[0]); // Add the uploaded file
     }
 
+    
     try {
       const response = await fetch('/api/sendEmailWithDocument', {
         method: 'POST',

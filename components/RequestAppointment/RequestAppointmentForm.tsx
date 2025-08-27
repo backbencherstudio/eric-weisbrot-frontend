@@ -58,39 +58,84 @@ export default function RequestAppointmentForm() {
         },
     });
 
+    // const onSubmit = async (data: FormData) => {
+    //     if(!data?.dateOfBirth){
+    //         return toast.error("Date of birth is missing")
+    //     }
+    //     console.log(data, "daata-------------")
+
+    //     try {
+    //         const formData = {
+    //             formData: data,
+    //             formType: 'message'
+    //         }
+
+    //         const response = await fetch("/api/submitForm", {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //             },
+    //             body: JSON.stringify(formData),
+    //         });
+
+    //         if (response.ok) {
+    //             console.log("Form submitted successfully!");
+    //             // Reset form fields after successful submission
+    //             reset()
+    //             setSelectedOptions([])
+    //         } else {
+    //             console.error("Form submission failed.");
+    //         }
+    //         // Handle form submission here
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
+
     const onSubmit = async (data: FormData) => {
-        if(!data?.dateOfBirth){
-            return toast.error("Date of birth is missing")
-        }
-        console.log(data, "daata-------------")
 
-        try {
-            const formData = {
-                formData: data,
-                formType: 'message'
-            }
+   
+       try {
+         const formData = {
+           formData: data,
+           formType: 'appointment'
+         }
+   
+         const response = await fetch("/api/submitForm", {
+           method: "POST",
+           headers: {
+             "Content-Type": "application/json",
+           },
+           body: JSON.stringify(formData),
+         });
+   
+         if (response.ok) {
+           console.log("Form submitted successfully!");
+           setValue("message", "")
+           setValue("conditions", "")
+           setValue("source", "")
+           setSelectedOptions([])
+           setValue("therapies", "")
+           setValue("state", "")
+           reset()
+           // Reset form fields after successful submission
+        //    setValue("firstName", "");
+        //    setValue("lastName", "");
+        //    setValue("phone", "");
+        //    setValue("email", "");
+        //    setValue("message", "");
+        //    setValue("source", "");
+        //    setSelectedOptions([])
+         } else {
+           console.error("Form submission failed.");
+         }
+         // Handle form submission here
+       } catch (error) {
+         console.log(error);
+       }
+     };
 
-            const response = await fetch("/api/submitForm", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            });
 
-            if (response.ok) {
-                console.log("Form submitted successfully!");
-                // Reset form fields after successful submission
-                reset()
-                setSelectedOptions([])
-            } else {
-                console.error("Form submission failed.");
-            }
-            // Handle form submission here
-        } catch (error) {
-            console.log(error);
-        }
-    };
 
     const handleOptionChange = (option: string) => {
         const newSelection = selectedOptions.includes(option)

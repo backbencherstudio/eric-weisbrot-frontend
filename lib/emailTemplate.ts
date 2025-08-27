@@ -1,7 +1,17 @@
 // lib/emailTemplate.ts
-import { ContactForm, DocumentUploadForm, MessageForm } from './types';
+import { AppointmentForm, ContactForm, DocumentUploadForm, MessageForm } from './types';
 
-export function generateEmailTemplate(formData: ContactForm | DocumentUploadForm | MessageForm, formType: string): string {
+const esc = (v: any) =>
+  String(v ?? '').replace(/[&<>"']/g, s =>
+    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]!)
+  );
+
+const show = (v: any, fallback = '—') =>
+  (v !== undefined && v !== null && String(v).trim() !== '') ? esc(v) : fallback;
+
+export function generateEmailTemplate(formData: ContactForm | DocumentUploadForm | MessageForm | AppointmentForm, formType: string): string {
+  
+  // console.log('from generate => ', formData, formType)
   if (formType === 'contact') {
     const contactFormData = formData as ContactForm; // Narrow to ContactForm type
     return `
@@ -142,7 +152,7 @@ export function generateEmailTemplate(formData: ContactForm | DocumentUploadForm
                 <h2 style="margin-top: 0; color: #4f46e5;">Message Content</h2>
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
-                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>Subject:</strong></td>
+                    <td width="120" style="color: #6b7280; padding: 8px 0;"><strong>I am a/an:</strong></td>
                     <td style="padding: 8px 0;">${messageFormData.subject}</td>
                   </tr>
                 </table>
@@ -161,6 +171,72 @@ export function generateEmailTemplate(formData: ContactForm | DocumentUploadForm
       </tr>
     </table>
   `;
+  }
+
+  // ---------- NEW: APPOINTMENT ----------
+  if (formType === 'appointment') {
+    const a = formData as AppointmentForm;
+    return `
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:700px;margin:0 auto;font-family:Arial,sans-serif;">
+      <tr>
+        <td bgcolor="#4f46e5" style="padding:22px;border-radius:6px 6px 0 0;color:#ffffff;text-align:center;">
+          <h1 style="margin:0;font-size:24px;">Request an Appointment</h1>
+          <p style="margin:6px 0 0;font-size:13px;opacity:.9;">A new lead just submitted the appointment form.</p>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#f9fafb" style="padding:22px;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:separate;border-spacing:0 14px;">
+            <tr>
+              <td bgcolor="#ffffff" style="padding:20px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.08);">
+                <h2 style="margin:0 0 10px;color:#4f46e5;">Patient Details</h2>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Patient Name:</strong></td><td style="padding:8px 0;">${esc(a.firstName)} ${esc(a.lastName)}</td></tr>
+                  <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Phone:</strong></td><td style="padding:8px 0;">${esc(a.phone)}</td></tr>
+                  <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Email:</strong></td><td style="padding:8px 0;">${esc(a.email)}</td></tr>
+                  <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>State:</strong></td><td style="padding:8px 0;">${show(a.state)}</td></tr>
+                  <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Date of Birth:</strong></td><td style="padding:8px 0;">${show(a.dateOfBirth)}</td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td bgcolor="#ffffff" style="padding:20px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.08);">
+                <h2 style="margin:0 0 10px;color:#4f46e5;">Clinical Information</h2>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Prescribed Therapy:</strong></td><td style="padding:8px 0;">${show(a.therapies)}</td></tr>
+                  <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Condition:</strong></td><td style="padding:8px 0;">${show(a.conditions)}</td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td bgcolor="#ffffff" style="padding:20px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.08);">
+                <h2 style="margin:0 0 10px;color:#4f46e5;">Marketing Source</h2>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>How did you hear about us?</strong></td><td style="padding:8px 0;">${show(a.source)}</td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td bgcolor="#ffffff" style="padding:20px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.08);">
+                <h2 style="margin:0 0 10px;color:#4f46e5;">Additional Comments</h2>
+                <div style="margin-top:6px;padding:14px;background:#f8fafc;border-left:3px solid #4f46e5;">
+                  <p style="margin:0;white-space:pre-wrap;">${show(a.message)}</p>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="text-align:center;padding-top:10px;color:#9ca3af;font-size:13px;">
+                <p style="margin:0;">This email was generated from the “Request an Appointment” form.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>`;
   }
 
   return '';

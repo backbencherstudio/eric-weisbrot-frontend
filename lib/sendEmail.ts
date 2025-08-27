@@ -41,6 +41,7 @@ import { generateEmailTemplate } from './emailTemplate';
 
 const gmailUser = process.env.GMAIL_USER;
 const gmailPassword = process.env.GMAIL_PASSWORD;
+const sendMailId = process.env.SEND_MAIL_ID;
 
 export async function sendEmail(formData: any, formType: string) {
   const transporter = nodemailer.createTransport({
@@ -58,10 +59,12 @@ export async function sendEmail(formData: any, formType: string) {
     subject = 'Contact Form Submission';
   } else if(formType === 'documentUpload'){
     subject = 'Referral Form Submission';
+  }else if(formType === 'appointment'){
+    subject = 'Appointment Form Submission';
   }
   const mailOptions: any = {
     from: gmailUser,
-    to: gmailUser, // You can customize this to send the email to the admin
+    to: sendMailId, // You can customize this to send the email to the admin
     subject: subject,
     html: generateEmailTemplate(formData, formType),
   };
