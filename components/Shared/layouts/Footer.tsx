@@ -51,7 +51,7 @@ const Footer = () => {
   pathname.includes("/submit-referral");
 
   return (
-    <footer className={`bg-[#070707] text-white ${!isBannerNotAvailable && "md:rounded-t-3xl rounded-t-2xl"} `}>
+    <footer className={`bg-[#070707] text-white `}>
       <div className={`maxContainer ${!isBannerNotAvailable ? "md:pt-[155px] pt-[110px]" : "md:pt-[80px] pt-[60px]"}   pb-5`}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info Section */}

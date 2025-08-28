@@ -20,13 +20,13 @@ const ReadyToSwitch = () => {
           <h2 className="headerText">Ready to switch to Dr. Eric weisbrot</h2>
           <div className="flex items-center ">
             <Link
-              href="/submit-referral"
+              href="/request-an-appointment"
               className="btn xl:text-lg lg:text-base "
             >
               Request an appointment
             </Link>
             <Link
-              href="/submit-referral"
+              href="/request-an-appointment"
               className="bgPrimary w-[52px] h-[52px] rounded-full flex items-center justify-center"
             >
               <ArrowUpIcon />

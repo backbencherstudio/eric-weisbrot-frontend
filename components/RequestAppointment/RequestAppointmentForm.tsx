@@ -54,45 +54,23 @@ export default function RequestAppointmentForm() {
         reset,
     } = useForm<FormData>({
         defaultValues: {
-            source: "",
+            firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        state: "",
+        message: "",
+        source: "",
+        therapies: "",
+        conditions: "",
+        dateOfBirth: undefined,
         },
     });
 
-    // const onSubmit = async (data: FormData) => {
-    //     if(!data?.dateOfBirth){
-    //         return toast.error("Date of birth is missing")
-    //     }
-    //     console.log(data, "daata-------------")
 
-    //     try {
-    //         const formData = {
-    //             formData: data,
-    //             formType: 'message'
-    //         }
-
-    //         const response = await fetch("/api/submitForm", {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //             body: JSON.stringify(formData),
-    //         });
-
-    //         if (response.ok) {
-    //             console.log("Form submitted successfully!");
-    //             // Reset form fields after successful submission
-    //             reset()
-    //             setSelectedOptions([])
-    //         } else {
-    //             console.error("Form submission failed.");
-    //         }
-    //         // Handle form submission here
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
 
     const onSubmit = async (data: FormData) => {
+
 
    
        try {
@@ -108,6 +86,8 @@ export default function RequestAppointmentForm() {
            },
            body: JSON.stringify(formData),
          });
+         const result = await response?.json()
+         console.log(result?.data)
    
          if (response.ok) {
            console.log("Form submitted successfully!");
@@ -118,6 +98,7 @@ export default function RequestAppointmentForm() {
            setValue("therapies", "")
            setValue("state", "")
            reset()
+           toast.success("Appointment request submitted")
            // Reset form fields after successful submission
         //    setValue("firstName", "");
         //    setValue("lastName", "");
@@ -132,6 +113,9 @@ export default function RequestAppointmentForm() {
          // Handle form submission here
        } catch (error) {
          console.log(error);
+       }
+       finally {
+        reset()
        }
      };
 
@@ -267,7 +251,7 @@ export default function RequestAppointmentForm() {
                             <label className="text-[#4A4C56] lg:text-xl md:text-lg text-base leading-[180%] block font-semibold mb-1.5">
                                 Select your state
                             </label>
-                            <Select onValueChange={(value) => setValue("state", value)} defaultValue="">
+                            <Select value={watch("state") || ""}  onValueChange={(value) => setValue("state", value)} defaultValue="">
                                 <SelectTrigger className="w-full rounded-md border bg-[#F3F6FC] border-[#E9E9EA] !xl:py-[15px] !py-3 px-3 focus:ring-1 focus:ring-[#162F73] focus:border-transparent text-[#4A4C56] leading-[160%] outline-none lg:text-base text-sm !h-[56px] cursor-pointer">
                                     <SelectValue placeholder="Select your state" className="" />
                                 </SelectTrigger>
@@ -293,7 +277,7 @@ export default function RequestAppointmentForm() {
                             <label className="text-[#4A4C56] lg:text-xl md:text-lg text-base leading-[180%] block font-semibold mb-1.5">
                                 What therapy have you been prescribed?
                             </label>
-                            <Select onValueChange={(value) => setValue("therapies", value)} defaultValue="">
+                            <Select value={watch("therapies") || ""}  onValueChange={(value) => setValue("therapies", value)} defaultValue="">
                                 <SelectTrigger className="w-full rounded-md border bg-[#F3F6FC] border-[#E9E9EA] !xl:py-[15px] !py-3 px-3 focus:ring-1 focus:ring-[#162F73] focus:border-transparent text-[#4A4C56] leading-[160%] outline-none lg:text-base text-sm !h-[56px] cursor-pointer">
                                     <SelectValue placeholder="Please Select" className="" />
                                 </SelectTrigger>
@@ -311,7 +295,7 @@ export default function RequestAppointmentForm() {
                             <label className="text-[#4A4C56] lg:text-xl md:text-lg text-base leading-[180%] block font-semibold mb-1.5">
                                 What is your condition?
                             </label>
-                            <Select onValueChange={(value) => setValue("conditions", value)} defaultValue="">
+                            <Select value={watch("conditions") || "" } onValueChange={(value) => setValue("conditions", value)} defaultValue="">
                                 <SelectTrigger className="w-full rounded-md border bg-[#F3F6FC] border-[#E9E9EA] !xl:py-[15px] !py-3 px-3 focus:ring-1 focus:ring-[#162F73] focus:border-transparent text-[#4A4C56] leading-[160%] outline-none lg:text-base text-sm !h-[56px] cursor-pointer">
                                     <SelectValue placeholder="Please Select" className="" />
                                 </SelectTrigger>

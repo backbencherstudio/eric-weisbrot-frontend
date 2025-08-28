@@ -17,7 +17,7 @@ export default function FooterBanner() {
     }
 
   return (
-    <div className='h-[150px] md:w-[calc(100vw-40px)] w-[calc(100vw-20px)] bg-[#162F73] mx-auto md:rounded-t-4xl rounded-t-2xl -mb-[75px] relative z-20  flex items-center'>
+    <div className='h-[150px]  bg-[#162F73] mx-auto  -mb-[75px] relative z-20  flex items-center'>
         <div className='flex lg:flex-row flex-col items-center justify-center gap-10 w-full md:p-0 p-4'>
             <div>
                 <h2 className="md:text-2xl text-xl text-white">Ready to switch Dr. Eric Weisbrot</h2>
