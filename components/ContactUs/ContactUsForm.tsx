@@ -46,6 +46,7 @@ export default function ContactUsForm() {
     handleSubmit,
     formState: { errors },
     setValue,
+    reset,
     watch,
   } = useForm<FormData>({
     defaultValues: {
@@ -73,24 +74,20 @@ export default function ContactUsForm() {
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        console.log("Form submitted successfully!");
-        // Reset form fields after successful submission
-        setValue("firstName", "");
-        setValue("lastName", "");
-        setValue("phone", "");
-        setValue("email", "");
-        setValue("subject", "");
-        setValue("message", "");
-        setValue("source", "");
-        setSelectedOptions([])
+      const result = await response?.json()
+
+      if (result?.success) {
+       toast.success(result?.message || "Appointment request submitted")
       } else {
-        console.error("Form submission failed.");
+        toast.error("Form submission failed.")
       }
       // Handle form submission here
     } catch (error) {
       console.log(error);
-    }
+    } finally {
+        setSelectedOptions([])
+        reset()
+       }
   };
 
   const handleOptionChange = (option: string) => {

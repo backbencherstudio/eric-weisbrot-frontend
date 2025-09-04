@@ -87,34 +87,18 @@ export default function RequestAppointmentForm() {
            body: JSON.stringify(formData),
          });
          const result = await response?.json()
-         console.log(result?.data)
    
-         if (response.ok) {
-           console.log("Form submitted successfully!");
-           setValue("message", "")
-           setValue("conditions", "")
-           setValue("source", "")
-           setSelectedOptions([])
-           setValue("therapies", "")
-           setValue("state", "")
-           reset()
-           toast.success("Appointment request submitted")
-           // Reset form fields after successful submission
-        //    setValue("firstName", "");
-        //    setValue("lastName", "");
-        //    setValue("phone", "");
-        //    setValue("email", "");
-        //    setValue("message", "");
-        //    setValue("source", "");
-        //    setSelectedOptions([])
+         if (result?.success) {
+           toast.success(result?.message || "Appointment request submitted")
          } else {
-           console.error("Form submission failed.");
+            toast.error("Form submission failed.")
          }
          // Handle form submission here
        } catch (error) {
          console.log(error);
        }
        finally {
+         setSelectedOptions([])
         reset()
        }
      };

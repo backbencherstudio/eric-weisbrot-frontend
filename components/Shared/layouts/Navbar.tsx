@@ -15,9 +15,9 @@ export default function Navbar() {
    console.log(pathname,"pathhh")
   // Define the links in an array
   const navLinks = [
+    { name: "About Us", href: "about-us" },
     { name: "Patients FAQs", href: "patients-faqs" },
     { name: "Conditions & Therapies", href: "conditions-therapies" },
-    { name: "About Us", href: "about-us" },
     { name: "Contact Us", href: "contact-us" },
   ];
 

@@ -8,7 +8,7 @@ const HomeBanner = () => {
   return (
     <div className="">
       <div
-        className="bg-no-repeat w-full bg-right rounded-[20px]"
+        className="bg-no-repeat w-full bg-right "
         style={{
           backgroundImage: `url("${banner.src}")`,
           backgroundSize: "cover",

@@ -8,6 +8,7 @@ import { useState, useCallback } from "react";
 import logo from "@/public/logo.png";
 import Image from "next/image";
 import UploadIcon from "../Icons/UploadIcon";
+import { toast } from "sonner";
 
 type FormData = {
   firstName: string;
@@ -36,6 +37,7 @@ export default function HowCanWeHelp() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
     setValue,
   } = useForm<FormData>();
 
@@ -63,13 +65,14 @@ export default function HowCanWeHelp() {
 
       const result = await response.json();
       if (result.success) {
-        alert('Form submitted and email task queued');
+        toast.success("Form submitted and email task queued")
+        reset()
       } else {
-        alert('Error submitting the form');
+        toast.error("Error submitting the form")
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Error submitting the form');
+      toast.error('Error submitting the form');
     }
 
   };
@@ -354,7 +357,7 @@ export default function HowCanWeHelp() {
                 <div className="mt-[38px]">
                   <button
                     type="submit"
-                    className="w-full bg-blue-900 hover:bg-blue-800 text-white font-medium py-4 px-6 rounded-full text-lg transition-colors duration-200"
+                    className="w-full bg-[#162F73]  hover:bg-[#162F73]/90 border-[#162F73] text-white font-medium py-4 px-6 rounded-full text-lg transition-colors duration-200 cursor-pointer"
                   >
                     Submit
                   </button>
