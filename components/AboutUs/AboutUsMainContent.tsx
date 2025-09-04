@@ -69,11 +69,11 @@ const AboutUsMainContent = () => {
                 treatment.
               </p>
               <div className="flex items-center lg:mt-12 md:mt-8 mt-6">
-                <Link href="" className="btn xl:text-lg lg:text-base ">
+                <Link href="/contact-us" className="btn xl:text-lg lg:text-base ">
                   Contact
                 </Link>
                 <Link
-                  href=""
+                  href="/contact-us"
                   className="bgPrimary w-[52px] h-[52px] rounded-full flex items-center justify-center"
                 >
                   <ArrowUpIcon />

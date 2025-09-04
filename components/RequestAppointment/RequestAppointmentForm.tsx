@@ -95,7 +95,7 @@ export default function RequestAppointmentForm() {
          }
          // Handle form submission here
        } catch (error) {
-         console.log(error);
+         console.error(error);
        }
        finally {
          setSelectedOptions([])
@@ -159,7 +159,7 @@ export default function RequestAppointmentForm() {
                             <div>
                                 <label
                                     htmlFor="lastName"
-                                    className="text-[#4A4C56] block opacity-0 lg:text-xl md:text-lg text-base leading-[180%]  font-medium mb-1.5"
+                                    className="text-[#4A4C56] hidden lg:block opacity-0 lg:text-xl md:text-lg text-base leading-[180%]  font-medium mb-1.5"
                                 >
                                     Last Name
                                 </label>
