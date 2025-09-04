@@ -232,9 +232,9 @@ export default function ContactUsForm() {
                     Patient
                   </SelectItem>
                   <SelectItem className=" md:text-lg text-base " value="Provider">Provider</SelectItem>
-                  <SelectItem className=" md:text-lg text-base " value="Payor">
+                  {/* <SelectItem className=" md:text-lg text-base " value="Payor">
                     Payor
-                  </SelectItem>
+                  </SelectItem> */}
                   <SelectItem className=" md:text-lg text-base " value="Other">Other</SelectItem>
                 </SelectContent>
               </Select>

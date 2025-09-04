@@ -32,11 +32,19 @@ const Counseling = () => {
     setOpenItem(prev => prev === itemId ? null : itemId);
   };
 
-  console.log(openItem,"open itemss")
+    //  if (typeof window !== 'undefined') {
+  //     const element = document.getElementById("ourCondition");
+  //     if (element) {
+  //        window.scrollTo({
+  //         top: element.offsetTop,
+  //         behavior: "smooth",
+  //       });
+  //     }
+  //   }
 
 
   return (
-    <div className="maxContainer xl:py-[100px] py-[60px]">
+    <div className="maxContainer xl:py-[100px] py-[60px]" id="ourTherapy">
       <div className="">
         <p className="sectionCategory !w-auto !inline-flex">Our Therapy</p>
         <h1 className="headerText !font-medium text-[#1D1F2C] mt-3">

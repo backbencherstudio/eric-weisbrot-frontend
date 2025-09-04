@@ -20,8 +20,8 @@ const TopBar = () => {
               </div>
             </div>
             <div className="flex items-center gap-2.5 ml-4">
-              <Link href="/conditions-therapies#ourCondition" className="mr-4">
-                Order Forms
+              <Link href="/conditions-therapies#ourTherapy" className="mr-4">
+                Order Sets
               </Link>
               <MessageIcon className="md:w-6 w-4 md:h-6 h-4" />
               <a href="mailto:billing@mdelw.com" className="">billing@mdelw.com</a>
