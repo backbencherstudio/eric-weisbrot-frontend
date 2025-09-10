@@ -20,7 +20,7 @@ export default function FooterBanner() {
     <div className='h-[150px]  bg-[#162F73] mx-auto  -mb-[75px] relative z-20  flex items-center'>
         <div className='flex lg:flex-row flex-col items-center justify-center gap-10 w-full md:p-0 p-4'>
             <div>
-                <h2 className="md:text-2xl text-xl text-white">Ready to switch Dr. Eric Weisbrot</h2>
+                <h2 className="md:text-2xl text-xl text-white">Ready to switch to Dr. Eric Weisbrot</h2>
             </div>
             <div className=" h-12 w-[1px] bg-white lg:block hidden"></div>
             <div className="flex  md:gap-8 gap-4">

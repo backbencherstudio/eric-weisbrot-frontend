@@ -128,7 +128,7 @@ export default function ContactUsForm() {
                 <input
                   id="firstName"
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder="Enter first name"
                   {...register("firstName", {
                     required: "First name is required",
                   })}
@@ -151,7 +151,7 @@ export default function ContactUsForm() {
                 <input
                   id="lastName"
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder="Enter last name"
                   {...register("lastName")}
                   className="w-full rounded-md border bg-[#F3F6FC] border-[#E9E9EA] xl:py-[15px] py-3 px-3 focus:ring-1 focus:ring-[#162F73] focus:border-transparent text-[#4A4C56] leading-[160%] outline-none lg:text-base text-sm "
                 />

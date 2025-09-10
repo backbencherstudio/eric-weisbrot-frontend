@@ -17,7 +17,7 @@ const ReadyToSwitch = () => {
         }}
       >
         <div className="flex flex-col justify-center items-center lg:gap-12 md:gap-8 gap-4 px-4">
-          <h2 className="headerText">Ready to switch to Dr. Eric weisbrot</h2>
+          <h2 className="headerText">Ready to switch to Dr. Eric Weisbrot</h2>
           <div className="flex items-center ">
             <Link
               href="/request-an-appointment"

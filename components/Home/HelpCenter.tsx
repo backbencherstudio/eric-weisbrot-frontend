@@ -33,7 +33,7 @@ const HelpCenter = () => {
           Questions And Answers
         </h3>
         <p className="text-[#4A4C56] ">
-          Find answers to the most commonly asked questions about cur services.
+          Find answers to the most commonly asked questions about our services.
         </p>
       </div>
       <div className="lg:mt-12 mt-8">

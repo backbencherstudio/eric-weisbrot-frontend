@@ -118,15 +118,14 @@ export default function HowCanWeHelp() {
         <div className="w-full lg:w-[41.5%] bg-[#E9F7FC33] rounded-[24px] border border-[#0000000D]  justify-center">
           <div className="xl:p-8 md:p-6 p-4 flex flex-col">
             <h1 className="xl:text-[32px] md:text-[28px] text-2xl font-medium leading-[130%] text-[#1D1F2C]">
-              Refer Your Patients to Dr. Eric weisbrot Centers for Exceptional
+              Refer Your Patients to Dr. Eric Weisbrot Centers for Exceptional
               Care
             </h1>
 
             <p className="text-[#4A4C56] xl:text-base lg:text-sm md:text-base text-sm leading-[180%]  md:mt-4 mt-3">
               Looking to refer your patients for infusion care at a Dr. Eric
-              weisbrot center? You're in the right place! We make referrals
-              simple and <br />
-              easy
+              Weisbrot center? You're in the right place! We make referrals
+              simple and easy.
             </p>
 
             <h2 className="text-[#1D1F2C] leading-[150%] font-medium lg:text-2xl md:text-xl text-lg md:mt-6 mt-4">

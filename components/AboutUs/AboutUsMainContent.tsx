@@ -144,7 +144,7 @@ const sectionsData = [
     paragraph:
       "Our infusion suite is staffed by highly trained nurses who specialize in IV access and patient monitoring, and who are focused on creating a calm and supportive experience.",
     listItems: [
-      "Biologic Infusion (e.g., Remicade, Enbrel, Stelera)",
+      "Biologic Infusion (e.g., Remicade, Enbrel, Stelara)",
       "Immunoglobulin Therapy (IVIg/SCIg)",
       "Iron Replacement Therapy",
       "Osteoporosis Treatments",
