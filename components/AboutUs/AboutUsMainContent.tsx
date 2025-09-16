@@ -23,7 +23,8 @@ const AboutUsMainContent = () => {
                   height={100}
                   className="lg:w-full md:w-[60%] w-full h-full rounded-[20px]"
                   unoptimized
-                  src={img1}
+                  // src={img1}
+                  src="/about-us/img1.png"
                   alt="img1"
                 />
               </div>
@@ -49,7 +50,7 @@ const AboutUsMainContent = () => {
                   height={100}
                   className="lg:w-full md:w-[60%] w-full h-full rounded-[20px]"
                   unoptimized
-                  src={img2}
+                  src="/about-us/img1.png"
                   alt="img1"
                 />
               </div>
@@ -91,7 +92,7 @@ const AboutUsMainContent = () => {
               <div key={index} className="flex flex-col lg:flex-row lg:items-center gap-12 ">
                 <div className={ `lg:flex-1 ${index % 2 === 1 ? "lg:order-1" : ""} `}>
                   <Image
-                    src={section.img}
+                    src="/about-us/img1.png"
                     alt={section.headerText}
                     className="lg:w-full  md:w-[60%] w-full max-h-[450px] rounded-[20px] object-cover"
                     width={100}
