@@ -1,9 +1,9 @@
 import React from "react";
-import img1 from "@/public/about-us/img1.png";
-import img2 from "@/public/about-us/img2.png";
-import img3 from "@/public/about-us/infusion-drip.jpg";
-import img4 from "@/public/about-us/img4.png";
-import img5 from "@/public/about-us/img3.png";
+// import img1 from "@/public/about-us/img1.png";
+// import img2 from "@/public/about-us/img2.png";
+// import img3 from "@/public/about-us/infusion-drip.jpg";
+// import img4 from "@/public/about-us/img4.png";
+// import img5 from "@/public/about-us/img3.png";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -50,7 +50,7 @@ const AboutUsMainContent = () => {
                   height={100}
                   className="lg:w-full md:w-[60%] w-full h-full rounded-[20px]"
                   unoptimized
-                  src="/about-us/img1.png"
+                  src="/about-us/img2.png"
                   alt="img1"
                 />
               </div>
@@ -92,7 +92,7 @@ const AboutUsMainContent = () => {
               <div key={index} className="flex flex-col lg:flex-row lg:items-center gap-12 ">
                 <div className={ `lg:flex-1 ${index % 2 === 1 ? "lg:order-1" : ""} `}>
                   <Image
-                    src="/about-us/img1.png"
+                    src={section?.img}
                     alt={section.headerText}
                     className="lg:w-full  md:w-[60%] w-full max-h-[450px] rounded-[20px] object-cover"
                     width={100}
@@ -126,7 +126,7 @@ export default AboutUsMainContent;
 
 const sectionsData = [
   {
-    img: "/about-us/img1.png", // Replace with the actual image URL
+    img: "/about-us/infusion-drip.jpg", // Replace with the actual image URL
     headerText: "Our Mission",
     paragraph:
       <p> At Dr. Weisbrot’s Infusion Center, our mission is to enhance quality of life by delivering exceptional <strong>infusion therapy</strong>  with compassion, expertise, and personalized care. We are dedicated to: </p>,
@@ -140,7 +140,7 @@ const sectionsData = [
     ],
   },
   {
-    img: "/about-us/img1.png", // Replace with the actual image URL
+    img: "/about-us/img4.png", // Replace with the actual image URL
     headerText: "What We Offer",
     paragraph:
       "Our infusion suite is staffed by highly trained nurses who specialize in IV access and patient monitoring, and who are focused on creating a calm and supportive experience.",
@@ -153,7 +153,7 @@ const sectionsData = [
     ],
   },
   {
-    img: "/about-us/img1.png", // Replace with the actual image URL
+    img: "/about-us/img3.png", // Replace with the actual image URL
     headerText: "Why Patients Choose Us",
     paragraph:
       "Whether you’re transitioning from a hospital setting, switching from a specialty pharmacy, or just looking for more personalized care, Dr. Weisbrot’s infusion center is here to make your treatment experience as smooth and supportive as possible.",

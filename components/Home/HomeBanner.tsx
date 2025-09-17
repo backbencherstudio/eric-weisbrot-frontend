@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "@/public/home/doctor-5.png";
+// import banner from "@/public/home/doctor-5.png";
 import ArrowUpIcon from "../Icons/ArrowUpIcon";
 import { Link2 } from "lucide-react";
 import Link from "next/link";
@@ -10,7 +10,7 @@ const HomeBanner = () => {
       <div
         className="bg-no-repeat w-full bg-right "
         style={{
-          backgroundImage: `url("${banner.src}")`,
+          backgroundImage: `url("${"/home/doctor-5.png"}")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

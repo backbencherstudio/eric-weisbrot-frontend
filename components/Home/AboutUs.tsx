@@ -1,7 +1,7 @@
 import React from "react";
-import img from "@/public/home/about.png";
+// import img from "@/public/home/about.png";
 import Image from "next/image";
-import ArrowUpIcon from "../Icons/ArrowUpIcon";
+// import ArrowUpIcon from "../Icons/ArrowUpIcon";
 
 const AboutUs = () => {
   return (
@@ -11,7 +11,8 @@ const AboutUs = () => {
           <Image
             width={100}
             height={100}
-            src={img}
+            // src={img}
+            src="/home/about.png"
             alt="about us"
             className="w-full md:w-[60%] lg:w-full h-full rounded-[20px]"
             unoptimized
