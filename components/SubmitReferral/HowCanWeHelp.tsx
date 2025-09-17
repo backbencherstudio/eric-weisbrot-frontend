@@ -159,7 +159,7 @@ export default function HowCanWeHelp() {
             <div className="">
               <div className="w-[190px] h-[66px]">
                 <Image
-                  src={logo}
+                  src="/logo.png"
                   alt="logo"
                   width={100}
                   height={100}

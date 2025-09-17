@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import logo from "@/public/logo.png";
+// import logo from "@/public/logo.png";
 import Image from "next/image";
 import ArrowUpIcon from "@/components/Icons/ArrowUpIcon";
 import MenuIcon from "@/components/Icons/MenuIcon";
@@ -44,7 +44,7 @@ export default function Navbar() {
           <div className="w-[190px] h-[66px]">
             <Link href="/">
               <Image
-                src={logo}
+                src="/logo.png"
                 alt="logo"
                 width={100}
                 height={100}
@@ -108,7 +108,7 @@ export default function Navbar() {
             <div className="w-[190px] h-[66px]">
               <Link href="/">
                 <Image
-                  src={logo}
+                  src="/logo.png"
                   alt="logo"
                   width={100}
                   height={100}

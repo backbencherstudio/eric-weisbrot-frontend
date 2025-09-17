@@ -28,7 +28,7 @@ const OurCondition = () => {
               {medicalConditions.map((condition) => (
                 <div
                   key={condition.id}
-                  className="rounded-lg bg-[#EFF8FF] p-6 text-center cursor-pointer hover:shadow-lg transition-shadow duration-200 "
+                  className="rounded-lg bg-[#EFF8FF] p-6 text-center  hover:shadow-lg transition-shadow duration-200 "
                 >
                   <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3 bg-[#0090FF]">
                     {condition.icon}

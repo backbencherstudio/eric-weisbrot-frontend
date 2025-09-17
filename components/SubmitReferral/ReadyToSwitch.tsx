@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "@/public/submit-referaral/readytoswitch.png";
+// import banner from "@/public/submit-referaral/readytoswitch.png";
 import Link from "next/link";
 import ArrowUpIcon from "../Icons/ArrowUpIcon";
 
@@ -9,7 +9,7 @@ const ReadyToSwitch = () => {
       <div
         className="bg-no-repeat w-full  text-white font-semibold text-center lg:text-[56px]"
         style={{
-          backgroundImage: `url("${banner.src}")`,
+          backgroundImage: `url("/submit-referaral/readytoswitch.png")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           paddingTop: `clamp(60px, 10vw, 100px)`,

@@ -61,7 +61,7 @@ const Footer = () => {
                 <Link href="/">
                   <Image
                     alt="logo"
-                    src={logo}
+                    src="/logoFooter.png"
                     width={100}
                     height={100}
                     className="w-full h-full"

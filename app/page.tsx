@@ -1,6 +1,6 @@
 import AboutUs from "@/components/Home/AboutUs";
-import BookConsultation from "@/components/Home/BookConsultation";
-import HelpCenter from "@/components/Home/HelpCenter";
+// import BookConsultation from "@/components/Home/BookConsultation";
+// import HelpCenter from "@/components/Home/HelpCenter";
 import HomeBanner from "@/components/Home/HomeBanner";
 import HowCanWeHelp from "@/components/SubmitReferral/HowCanWeHelp";
 
