@@ -7,7 +7,7 @@ import RequestAppointmentForm from '@/components/RequestAppointment/RequestAppoi
 export default function RequestAnAppointmentPage() {
   return (
     <div>
-      <ReuseableBanner banner={banner} text="Request an Appointment" />
+      <ReuseableBanner banner="/home/raw-image/request-appointment-image.jpg" text="Request an Appointment" />
       <RequestAppointmentForm />
     </div>
   )

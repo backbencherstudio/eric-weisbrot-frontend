@@ -8,7 +8,7 @@ const ReuseableBanner = ({banner,text}) => {
         className="bg-no-repeat w-full bg-center   text-white font-semibold text-center lg:text-[56px]"
         style={{
           // backgroundImage: `url("${banner.src}")`,
-          background: `linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),url("${banner.src}") `,
+          background: `linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),url("${banner}") `,
           backgroundSize: "cover",
           // backgroundPosition: "top",
           backgroundRepeat:"no-repeat",

@@ -7,7 +7,7 @@ import ReadyToSwitch from '@/components/SubmitReferral/ReadyToSwitch';
 const SubmitRefarralPage = () => {
     return (
         <div>
-            <ReuseableBanner banner={banner} text="Submit referral"/>
+            <ReuseableBanner banner="/home/raw-image/submit2.jpg" text="Submit referral"/>
             <HowCanWeHelp/>
             <ReadyToSwitch/>
         </div>

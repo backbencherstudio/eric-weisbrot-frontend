@@ -97,14 +97,14 @@ export default PatientsMainSection;
 const patientsCare = [
   {
     id: "item-1",
-    img: img1,
+    img: "/patients-faqs/img1.png",
     header: "Intensive Caring",
     description:
       "At Dr. Eric Weisbrot’s infusion clinic, we understand that beginning infusion therapy can feel overwhelming, especially if it’s your first time. To help ease the process, we’ve compiled answers to the most common questions patients ask. From what to expect during your first visit to how to prepare for your appointment, these FAQs are designed to give you clear, reassuring information so you can feel confident about your treatment. Our team is committed to making every visit as comfortable and stress-free as possible, with trained nurses available to guide you through each step. ",
   },
   {
     id: "item-2",
-    img: img2,
+    img: "/patients-faqs/img2.png",
     header: "Best of Care",
     description:
       "In addition to addressing patient concerns, our FAQ page also supports families and caregivers who want to know more about the process. You’ll find helpful details on insurance coverage, appointment preparation, and what happens during and after an infusion session. We encourage patients to reach out with any additional questions—our team believes no concern is too small when it comes to your health and comfort. By providing easy-to-understand information, Dr. Weisbrot’s practice ensures that every patient feels supported, informed, and cared for throughout their infusion therapy journey. ",
