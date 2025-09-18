@@ -77,7 +77,7 @@ export default function ContactUsForm() {
       const result = await response?.json()
 
       if (result?.success) {
-       toast.success(result?.message || "Appointment request submitted")
+       toast.success("Appointment request submitted")
       } else {
         toast.error("Form submission failed.")
       }
