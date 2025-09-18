@@ -85,7 +85,7 @@ const Footer = () => {
               <a href="#" className="">
                 <TwitterIcon />
               </a> */}
-              <a href="#" className="">
+              <a href="https://www.linkedin.com/in/eric-weisbrot-04582b37a"  target="_blank" className="">
                 <LinkdinIcon className="" />
               </a>
             </div>

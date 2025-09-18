@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   //   loader: 'default',
   //   unoptimized: true, // disables sharp entirely
   // },
+
+  api: {
+    bodyParser: {
+      sizeLimit: '50mb', // Change this value to your desired size limit
+    },
+  },
 };
 
 export default nextConfig;

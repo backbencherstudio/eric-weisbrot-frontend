@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, message: 'No image file uploaded' }, { status: 400 });
     }
 
-    if (!firstName || !lastName || !phone || !email) {
+    if (!firstName || !phone ) {
       return NextResponse.json({ success: false, message: 'Missing form data' }, { status: 400 });
     }
 

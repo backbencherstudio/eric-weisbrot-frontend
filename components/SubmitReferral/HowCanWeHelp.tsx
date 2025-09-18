@@ -65,12 +65,14 @@ export default function HowCanWeHelp() {
 
       const result = await response.json();
       if (result.success) {
-        toast.success("Form submitted and email task queued")
+        toast.success("Form submitted Successfully")
         reset()
+        setUploadedFiles([])
       } else {
         toast.error("Error submitting the form")
       }
     } catch (error) {
+      setUploadedFiles([])
       console.error('Error submitting form:', error);
       toast.error('Error submitting the form');
     }

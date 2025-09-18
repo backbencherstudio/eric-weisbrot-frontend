@@ -6,12 +6,11 @@ import TopBar from "@/components/Shared/layouts/TopBar";
 import Navbar from "@/components/Shared/layouts/Navbar";
 import Footer from "@/components/Shared/layouts/Footer";
 import AccessiBeWidget from "@/components/Widget/accessibe-widget";
-import Script from "next/script";
 import { Toaster } from "sonner";
 import FooterBanner from "@/components/Shared/layouts/FooterBanner";
 
 export const metadata: Metadata = {
-  title: AppConfig().app.name,
+  title: "Dr. Eric Weisbrot",
   description: AppConfig().app.slogan,
 };
 
