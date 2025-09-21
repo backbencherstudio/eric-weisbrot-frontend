@@ -153,7 +153,7 @@ const sectionsData = [
     ],
   },
   {
-    img: "/about-us/img3.png", // Replace with the actual image URL
+    img: "/about-us/why-choose-us.png", // Replace with the actual image URL
     headerText: "Why Patients Choose Us",
     paragraph:
       "Whether you’re transitioning from a hospital setting, switching from a specialty pharmacy, or just looking for more personalized care, Dr. Weisbrot’s infusion center is here to make your treatment experience as smooth and supportive as possible.",

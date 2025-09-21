@@ -8,11 +8,11 @@ const HomeBanner = () => {
   return (
     <div className="">
       <div
-        className="bg-no-repeat w-full bg-right "
+        className="bg-no-repeat w-ful 2xl:bg-top bg-center bg-cover "
         style={{
-          backgroundImage: `url("${"/home/doctor-5.png"}")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundImage: `url("${"/home/home-banner-img2.png"}")`,
+          // backgroundSize: "100%",
+          // backgroundPosition: "center",
         }}
       >
         <div className="maxContainer">

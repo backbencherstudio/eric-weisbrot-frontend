@@ -7,7 +7,7 @@ import AboutUsMainContent from '@/components/AboutUs/AboutUsMainContent';
 const AboutUsPage = () => {
     return (
         <div>
-            <ReuseableBanner banner="/home/raw-image/about-us2.jpg" text="About Us" />
+            <ReuseableBanner banner="/about-us/about-us-img.png" text="About Us" />
             <AboutUsMainContent/>
             <ReadyToSwitch/>
         </div>
