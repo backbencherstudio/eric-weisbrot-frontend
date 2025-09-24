@@ -10,7 +10,7 @@ const ReuseableBanner = ({banner,text}) => {
   return (
     <div className="">
       <div
-        className={`bg-no-repeat w-full  ${about ? "lg:!bg-center " : "!bg-top"}  text-white font-semibold text-center lg:text-[56px]`}
+        className={`bg-no-repeat w-full  ${about ? "!bg-center " : "!bg-top"}  text-white font-semibold text-center lg:text-[56px]`}
         style={{
           // backgroundImage: `url("${banner.src}")`,
           background: `linear-gradient(0deg, rgba(0, 0, 0, ${contact ? ".20" : ".40"}) 0%, rgba(0, 0, 0,${contact ? ".20" : ".40"}) 100%),url("${banner}") `,

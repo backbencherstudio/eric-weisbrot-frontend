@@ -6,7 +6,7 @@ import ContactUsForm from '@/components/ContactUs/ContactUsForm';
 const ContactUsPage = () => {
     return (
         <div>
-            <ReuseableBanner banner="/home/contact-us.png" text="Contact us" />
+            <ReuseableBanner banner="/contact-us/contact-us2.jpg" text="Contact us" />
             <ContactUsForm/>
         </div>
     );
