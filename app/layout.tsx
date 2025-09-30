@@ -12,6 +12,9 @@ import FooterBanner from "@/components/Shared/layouts/FooterBanner";
 export const metadata: Metadata = {
   title: "Dr. Eric Weisbrot",
   description: AppConfig().app.slogan,
+   icons: {
+    icon: "/favicon.ico", 
+  },
 };
 
 export default function RootLayout({
