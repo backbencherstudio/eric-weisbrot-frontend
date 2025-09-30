@@ -34,7 +34,7 @@ const AboutUsMainContent = () => {
                 Comfort. Safety. Results
               </h2>
               <p className="text-[#4A4C56] md:text-base text-sm leading-[180%] text-justify">
-                Dr. Robert Weisbrot’s Infusion Center is a physician-led facility specializing in the administration of advanced intravenous therapies. With board certification in internal medicine and two decades of clinical experience, Dr. Weisbrot provides comprehensive care for patients with autoimmune, rheumatologic, neurological, and gastrointestinal conditions requiring infusion therapy. Our center is equipped with specialized nursing staff, strict safety protocols, and evidence-based practices, ensuring patients receive high-quality treatment in a controlled and supportive setting.  
+                Dr. Eric Weisbrot’s Infusion Center is a physician-led facility specializing in the administration of advanced intravenous therapies. With board certification in internal medicine and two decades of clinical experience, Dr. Weisbrot provides comprehensive care for patients with autoimmune, rheumatologic, neurological, and gastrointestinal conditions requiring infusion therapy. Our center is equipped with specialized nursing staff, strict safety protocols, and evidence-based practices, ensuring patients receive high-quality treatment in a controlled and supportive setting.  
               </p>
             </div>
           </div>
@@ -50,7 +50,7 @@ const AboutUsMainContent = () => {
                   height={100}
                   className="lg:w-full md:w-[60%] w-full h-full rounded-[20px]"
                   unoptimized
-                  src="/about-us/img2.png"
+                  src="/dr-eric.png"
                   alt="img1"
                 />
               </div>
@@ -60,14 +60,7 @@ const AboutUsMainContent = () => {
                 Meet Dr. Weisbrot
               </h2>
               <p className="text-[#4A4C56] md:text-base text-sm leading-[180%] text-justify mt-5">
-                Dr. Robert Weisbrot is a board-certified physician with over 20
-                years of experience in internal medicine and specialty care.
-                Known for his compassionate approach and clinical excellence,
-                Dr. Weisbrot is deeply invested in helping patients navigate
-                chronic conditions such as autoimmune diseases, immune
-                deficiencies, gastrointestinal disorders, and rheumatologic
-                conditions — with infusion therapy often being a key part of
-                treatment.
+                 Dr. Eric Weisbrot is a board eligible physician with over 45 years of experience in family medicine and specialty care. Known for his compassionate approach and clinical excellence, Dr. Weisbrot is deeply invested in helping patients navigate chronic conditions such as autoimmune diseases, immune deficiencies, gastrointestinal disorders, and rheumatologic conditions — with infusion therapy often being a key part of treatment.
               </p>
               <div className="flex items-center lg:mt-12 md:mt-8 mt-6">
                 <Link href="/contact-us" className="btn xl:text-lg lg:text-base ">

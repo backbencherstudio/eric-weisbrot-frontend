@@ -12,7 +12,7 @@ const AboutUs = () => {
             width={100}
             height={100}
             // src={img}
-            src="/home/about.png"
+            src="/dr-eric.png"
             alt="about us"
             className="w-full md:w-[60%] lg:w-full h-full rounded-[20px]"
             unoptimized
@@ -24,18 +24,12 @@ const AboutUs = () => {
           </div>
           <div>
             <h2 className="xl:text-12 lg:text-[32px] text-[28px] leading-[120%] font-medium text-[#1D1F2C] mt-3">
-              About the Eric L. Weisbrot
+              About Dr. Eric Weisbrot
             </h2>
           </div>
           <div className="flex flex-col md:gap-4 gap-2.5 mt-4 xl:text-base text-sm leading-[180%] text-[#4A4C56]">
             <p className="">
-              Dr. Robert Weisbrot is a board-certified physician with over 20
-              years of experience in internal medicine and specialty care. Known
-              for his compassionate approach and clinical excellence, Dr.
-              Weisbrot is deeply invested in helping patients navigate chronic
-              conditions such as autoimmune diseases, immune deficiencies,
-              gastrointestinal disorders, and rheumatologic conditions — with
-              infusion therapy often being a key part of treatment.
+              Dr. Eric Weisbrot is a board eligible physician with over 45 years of experience in family medicine and specialty care. Known for his compassionate approach and clinical excellence, Dr. Weisbrot is deeply invested in helping patients navigate chronic conditions such as autoimmune diseases, immune deficiencies, gastrointestinal disorders, and rheumatologic conditions — with infusion therapy often being a key part of treatment.
             </p>
             <p className="">
               Throughout his career, Dr. Weisbrot has honed a diverse skill set
@@ -45,14 +39,14 @@ const AboutUs = () => {
               acute care, allowing him to provide treatment solutions tailored
               to individual patient needs.
             </p>
-            <p className="">
+            {/* <p className="">
               Throughout his career, Dr. Weisbrot has honed a diverse skill set
               that includes diagnostic acumen, patient management, and in-depth
               knowledge of various medical conditions. He has extensive
               experience in preventive medicine, chronic disease management, and
               acute care, allowing him to provide treatment solutions tailored
               to individual patient needs.
-            </p>
+            </p> */}
           </div>
           {/* <div className="flex items-center lg:mt-8 mt-5">
             <button className="btn xl:text-lg lg:text-base ">
