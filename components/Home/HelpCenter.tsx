@@ -25,7 +25,7 @@ const HelpCenter = () => {
   return (
     <div
       className="
-        my-[80px] maxContainer leading-[180%]"
+        md:my-[60px] my-[40px] maxContainer leading-[180%]"
     >
       <div className="lg:max-w-[773px] mx-auto  text-center flex  flex-col items-center">
         <p className="sectionCategory">Help Center</p>
