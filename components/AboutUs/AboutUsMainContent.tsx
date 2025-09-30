@@ -13,8 +13,8 @@ import SelectedIcon from "../Icons/SelectedIcon";
 const AboutUsMainContent = () => {
   return (
     <div>
-      <div className="bg-[#FBFBFB]">
-        <div className="maxContainer lg:py-[100px] py-[60px]">
+      <div className="bg-[#FBFBFB] pt-10">
+        <div className="maxContainer md:py-[60px] py-[40px]">
           <div className="flex lg:flex-row flex-col md:justify-between xl:gap-[96px] gap-10 lg:items-center">
             <div className="lg:w-[35.75%]">
               <div>
@@ -29,7 +29,7 @@ const AboutUsMainContent = () => {
                 />
               </div>
             </div>
-            <div className="flex-1 flex flex-col gap-5">
+            <div className="flex-1 flex flex-col gap-5 ">
               <h2 className="headerText text-[#1D1F2C] !font-semibold">
                 Comfort. Safety. Results
               </h2>
@@ -41,7 +41,7 @@ const AboutUsMainContent = () => {
         </div>
       </div>
       <div className="">
-        <div className="maxContainer lg:py-[100px] py-[60px]">
+        <div className="maxContainer md:py-[60px] py-[40px]">
           <div className="flex lg:flex-row flex-col md:justify-between xl:gap-[46px] gap-6 lg:items-center">
             <div className="lg:w-[40.83%] lg:order-2">
               <div>
@@ -81,7 +81,7 @@ const AboutUsMainContent = () => {
       <div>
         {sectionsData.map((section, index) => (
           <div key={index} className={`${index % 2 === 0 ? "bg-[#FBFBFB] " : ""}`}>
-            <div className="maxContainer lg:py-[100px] py-[60px]">
+            <div className="maxContainer md:py-[60px] py-[40px]">
               <div key={index} className="flex flex-col lg:flex-row lg:items-center gap-12 ">
                 <div className={ `lg:flex-1 ${index % 2 === 1 ? "lg:order-1" : ""} `}>
                   <Image

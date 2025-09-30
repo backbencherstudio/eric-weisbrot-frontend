@@ -44,7 +44,7 @@ const Counseling = () => {
 
 
   return (
-    <div className="maxContainer xl:py-[100px] py-[60px]" id="ourTherapy">
+    <div className="maxContainer xl:py-[60px] py-[40px]" id="ourTherapy">
       <div className="">
         <p className="sectionCategory !w-auto !inline-flex">Our Therapy</p>
         <h1 className="headerText !font-medium text-[#1D1F2C] mt-3">
