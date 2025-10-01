@@ -61,7 +61,7 @@ const HelpCenter = () => {
                     </span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="md:p-6 p-3 bg-[#F3F6FC] text-[#1D1F2C] leading-[180%] lg:text-lg md:text-base text-sm">
+                <AccordionContent className="md:p-6 p-3 bg-[#F3F6FC] text-[#1D1F2C] leading-[180%] lg:text-lg md:text-base text-sm text-justify">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

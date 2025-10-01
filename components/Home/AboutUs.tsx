@@ -27,7 +27,7 @@ const AboutUs = () => {
               About Dr. Eric Weisbrot
             </h2>
           </div>
-          <div className="flex flex-col md:gap-4 gap-2.5 mt-4 xl:text-base text-sm leading-[180%] text-[#4A4C56]">
+          <div className="flex flex-col md:gap-4 gap-2.5 mt-4 xl:text-base text-sm leading-[180%] text-[#4A4C56] text-justify">
             <p className="">
               Dr. Eric Weisbrot is a board eligible physician with over 45 years of experience in family medicine and specialty care. Known for his compassionate approach and clinical excellence, Dr. Weisbrot is deeply invested in helping patients navigate chronic conditions such as autoimmune diseases, immune deficiencies, gastrointestinal disorders, and rheumatologic conditions — with infusion therapy often being a key part of treatment.
             </p>

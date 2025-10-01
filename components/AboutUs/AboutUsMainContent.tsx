@@ -97,7 +97,7 @@ const AboutUsMainContent = () => {
                   <h2 className="lg:text-[32px] md:text-[28px] text-2xl text-[#1D1F2C] leading-[130%] font-semibold">
                     {section.headerText}
                   </h2>
-                  <div className="text-[#4A4C56] leading-[180%] md:text-base text-sm mt-4">{section.paragraph}</div>
+                  <div className="text-[#4A4C56] leading-[180%] md:text-base text-sm mt-4 text-justify">{section.paragraph}</div>
                   <ul className="flex flex-col gap-4 pt-2.5">
                     {section.listItems.map((item, idx) => (
                       <li key={idx} className="flex gap-2.5 items-center text-black md:text-base text-sm leading-[180%]">

@@ -18,7 +18,7 @@ const OurCondition = () => {
           <h1 className="headerText !font-medium text-[#1D1F2C] mt-3">
             Conditions & Therapies 
           </h1>
-          <p className="text-[#4A4C56] md:text-base text-sm leading-[180%] mt-4">
+          <p className="text-[#4A4C56] md:text-base text-sm leading-[180%] mt-4 text-justify">
             Infusion therapy helps treat conditions where oral medications aren’t effective, including autoimmune disorders like rheumatoid arthritis, Crohn’s disease, multiple sclerosis, and lupus. It is also used for osteoporosis, chronic infections, and certain neurological conditions. Common therapies include biologics, antibiotics, hydration, and immune-modulating medications—delivered directly into the bloodstream for faster, more effective results. Each treatment plan is personalized, with patients carefully monitored to ensure safety and comfort. 
           </p>
         </div>
