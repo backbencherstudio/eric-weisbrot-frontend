@@ -34,7 +34,7 @@ const AboutUsMainContent = () => {
                 Comfort. Safety. Results
               </h2>
               <p className="text-[#4A4C56] md:text-base text-sm leading-[180%] text-justify">
-                Dr. Eric Weisbrot’s Infusion Center is a physician-led facility specializing in the administration of advanced intravenous therapies. With board certification in internal medicine and two decades of clinical experience, Dr. Weisbrot provides comprehensive care for patients with autoimmune, rheumatologic, neurological, and gastrointestinal conditions requiring infusion therapy. Our center is equipped with specialized nursing staff, strict safety protocols, and evidence-based practices, ensuring patients receive high-quality treatment in a controlled and supportive setting.  
+                Dr. Eric Weisbrot’s infusion suite is a physician-led facility specializing in the administration of advanced intravenous therapies. With board certification in internal medicine and two decades of clinical experience, Dr. Weisbrot provides comprehensive care for patients with autoimmune, rheumatologic, neurological, and gastrointestinal conditions requiring infusion therapy. Our infusion suite is equipped with specialized nursing staff, strict safety protocols, and evidence-based practices, ensuring patients receive high-quality treatment in a controlled and supportive setting.  
               </p>
             </div>
           </div>
@@ -87,7 +87,7 @@ const AboutUsMainContent = () => {
                   <Image
                     src={section?.img}
                     alt={section.headerText}
-                    className="lg:w-full  md:w-[60%] w-full max-h-[450px] rounded-[20px] object-cover"
+                    className="lg:w-full  md:w-[60%] w-full max-h-[450px] rounded-[20px] object-cover "
                     width={100}
                     height={100}
                     unoptimized
@@ -119,10 +119,10 @@ export default AboutUsMainContent;
 
 const sectionsData = [
   {
-    img: "/about-us/infusion-drip.jpg", // Replace with the actual image URL
+    img: "/about-us/our-mission.jpg", // Replace with the actual image URL
     headerText: "Our Mission",
     paragraph:
-      <p> At Dr. Weisbrot’s Infusion Center, our mission is to enhance quality of life by delivering exceptional <strong>infusion therapy</strong>  with compassion, expertise, and personalized care. We are dedicated to: </p>,
+      <p> At Dr. Weisbrot’s infusion suite, our mission is to enhance quality of life by delivering exceptional <strong>infusion therapy</strong>  with compassion, expertise, and personalized care. We are dedicated to: </p>,
     listItems: [
       <span><strong>Providing safe and effective infusion treatments</strong> tailored to each patient’s medical needs in a comfortable setting.</span>,
       <span><strong>Ensuring timely access to therapy</strong> with minimal wait times, flexible scheduling, and streamlined processes.</span>
@@ -146,10 +146,10 @@ const sectionsData = [
     ],
   },
   {
-    img: "/about-us/why-choose-us.png", // Replace with the actual image URL
+    img: "/about-us/patients-choose-us.jpg", // Replace with the actual image URL
     headerText: "Why Patients Choose Us",
     paragraph:
-      "Whether you’re transitioning from a hospital setting, switching from a specialty pharmacy, or just looking for more personalized care, Dr. Weisbrot’s infusion center is here to make your treatment experience as smooth and supportive as possible.",
+      "Whether you’re transitioning from a hospital setting, switching from a specialty pharmacy, or just looking for more personalized care, Dr. Weisbrot’s infusion suite is here to make your treatment experience as smooth and supportive as possible.",
     listItems: [
       "Convenient Bilateral Location",
       "On-site Physician Expertise",

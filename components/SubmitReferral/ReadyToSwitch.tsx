@@ -9,9 +9,11 @@ const ReadyToSwitch = () => {
       <div
         className="bg-no-repeat w-full  text-white font-semibold text-center lg:text-[56px]"
         style={{
-          backgroundImage: `url("/submit-referaral/readytoswitch.png")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          // backgroundImage: `url("/submit-referaral/footer-banner1.jpg")`,
+
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/submit-referaral/ready-to-switch.png")`,
+           backgroundSize: "cover",
+          backgroundPosition: "bottom",
           paddingTop: `clamp(60px, 10vw, 100px)`,
           paddingBottom: `clamp(60px, 10vw, 100px)`,
         }}
