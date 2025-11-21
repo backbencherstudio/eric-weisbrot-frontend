@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { sendEmail } from "@/lib/sendEmail";
+import { emailQueue } from "@/lib/inMemoryQueue";
 
 export const config = {
   api: {
@@ -38,8 +38,9 @@ export async function POST(req: NextRequest) {
 
     const buffer = Buffer.from(await file.arrayBuffer());
 
-    const result = await sendEmail(
-      {
+    // Add email task to the in-memory queue
+    await emailQueue.add("sendEmail", {
+      formData: {
         firstName,
         lastName,
         phone,
@@ -51,19 +52,12 @@ export async function POST(req: NextRequest) {
           mimetype: file.type,
         },
       },
-      "documentUpload"
-    );
-
-    if (!result.success) {
-      return NextResponse.json(
-        { success: false, message: result.message },
-        { status: 500 }
-      );
-    }
+      formType: "documentUpload",
+    });
 
     return NextResponse.json({
       success: true,
-      message: "Document emailed successfully",
+      message: "Document uploaded and email task queued",
       firstName,
       lastName,
       phone,
