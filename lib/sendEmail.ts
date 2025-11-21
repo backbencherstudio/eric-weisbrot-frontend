@@ -31,13 +31,10 @@
 //   }
 // }
 
-
 // lib/sendEmail.ts
-import nodemailer from 'nodemailer';
-import path from 'path';
-import fs from 'fs'; // For file handling
-import { generateEmailTemplate } from './emailTemplate';
-
+import nodemailer from "nodemailer";
+import fs from "fs"; // For file handling
+import { generateEmailTemplate } from "./emailTemplate";
 
 const gmailUser = process.env.GMAIL_USER;
 const gmailPassword = process.env.GMAIL_PASSWORD;
@@ -45,22 +42,22 @@ const sendMailId = process.env.SEND_MAIL_ID;
 
 export async function sendEmail(formData: any, formType: string) {
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
     auth: {
       user: gmailUser,
       pass: gmailPassword,
     },
   });
 
-  let subject = '';
-  if(formType === 'contact'){
-    subject = 'Free Consultation Form Submission';
-  } else if(formType === 'message'){
-    subject = 'Contact Form Submission';
-  } else if(formType === 'documentUpload'){
-    subject = 'Referral Form Submission';
-  }else if(formType === 'appointment'){
-    subject = 'Appointment Form Submission';
+  let subject = "";
+  if (formType === "contact") {
+    subject = "Free Consultation Form Submission";
+  } else if (formType === "message") {
+    subject = "Contact Form Submission";
+  } else if (formType === "documentUpload") {
+    subject = "Referral Form Submission";
+  } else if (formType === "appointment") {
+    subject = "Appointment Form Submission";
   }
   const mailOptions: any = {
     from: gmailUser,
@@ -70,28 +67,40 @@ export async function sendEmail(formData: any, formType: string) {
   };
 
   // If the form type is documentUpload, attach the file
-  if (formType === 'documentUpload' && formData.documents) {
-    mailOptions.attachments = [
-      {
-        filename: formData.documents.originalname, // Get original file name
-        path: formData.documents.path, // Path to the uploaded file
-      },
-    ];
+  if (formType === "documentUpload" && formData.documents) {
+    const attachment: any = {
+      filename: formData.documents.originalname || formData.documents.name,
+    };
+
+    if (formData.documents.buffer) {
+      attachment.content = formData.documents.buffer;
+      if (formData.documents.mimetype) {
+        attachment.contentType = formData.documents.mimetype;
+      }
+    } else if (formData.documents.path) {
+      attachment.path = formData.documents.path;
+    }
+
+    mailOptions.attachments = [attachment];
   }
 
   try {
     await transporter.sendMail(mailOptions);
-     // If the email was sent successfully, delete the file
-     if (formType === 'documentUpload' && formData.documents) {
-        fs.unlink(formData.documents.path, (err) => {
-          if (err) {
-            console.error('Error deleting the file:', err);
-          } else {
-            console.log(`File ${formData.documents.path} deleted successfully.`);
-          }
-        });
-      }
-    return { success: true, message: 'Email sent successfully' };
+    // If the email was sent successfully, delete the file
+    if (
+      formType === "documentUpload" &&
+      formData.documents &&
+      formData.documents.path
+    ) {
+      fs.unlink(formData.documents.path, (err) => {
+        if (err) {
+          console.error("Error deleting the file:", err);
+        } else {
+          console.log(`File ${formData.documents.path} deleted successfully.`);
+        }
+      });
+    }
+    return { success: true, message: "Email sent successfully" };
   } catch (error: any) {
     return { success: false, message: error.message };
   }
