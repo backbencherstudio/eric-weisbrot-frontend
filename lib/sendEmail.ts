@@ -41,6 +41,7 @@ const gmailPassword = process.env.GMAIL_PASSWORD;
 const sendMailId = process.env.SEND_MAIL_ID;
 
 export async function sendEmail(formData: any, formType: string) {
+  console.log("formData", formData, formType);
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -100,8 +101,10 @@ export async function sendEmail(formData: any, formType: string) {
         }
       });
     }
+    console.log("Email sent successfully");
     return { success: true, message: "Email sent successfully" };
   } catch (error: any) {
+    console.error("Error sending email:", error);
     return { success: false, message: error.message };
   }
 }
