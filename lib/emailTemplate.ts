@@ -194,7 +194,7 @@ export function generateEmailTemplate(formData: ContactForm | DocumentUploadForm
                   <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Patient Name:</strong></td><td style="padding:8px 0;">${esc(a.firstName)} ${esc(a.lastName)}</td></tr>
                   <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Phone:</strong></td><td style="padding:8px 0;">${esc(a.phone)}</td></tr>
                   <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Email:</strong></td><td style="padding:8px 0;">${esc(a.email)}</td></tr>
-                  <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>State:</strong></td><td style="padding:8px 0;">${show(a.state)}</td></tr>
+               <!--   <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>State:</strong></td><td style="padding:8px 0;">${show(a.state)}</td></tr> -->
                   <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Date of Birth:</strong></td><td style="padding:8px 0;">${show(a.dateOfBirth)}</td></tr>
                 </table>
               </td>
