@@ -107,7 +107,7 @@ export default function ContactUsForm() {
         <div className="flex flex-col gap-[15px] justify-center items-center mb-[15px] text-center">
         <h1 className="headerText text-[#161721] !font-semibold">How Can We Help?</h1>
         <p className="text-[#4A4C56] leading-[180%]">
-          {/* Have a question? Send us a message, and we'll get right back to you. */}
+          Have a question? Send us a message, and we'll get right back to you.
         </p>
       </div>
         <div className="rounded-[24px] border border-[#0000000D] lg:p-[56px] md:p-[32px] p-4">
