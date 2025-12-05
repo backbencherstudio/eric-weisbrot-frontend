@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { emailQueue } from "@/lib/inMemoryQueue";
 
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: "20mb", // adjust the size you need
-    },
-  },
-};
+// export const config = {
+//   api: {
+//     bodyParser: {
+//       sizeLimit: "20mb", // adjust the size you need
+//     },
+//   },
+// };
 // Handle the image upload and additional fields
 export async function POST(req: NextRequest) {
   try {
