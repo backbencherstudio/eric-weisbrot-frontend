@@ -8,11 +8,11 @@ const nextConfig: NextConfig = {
   //   unoptimized: true, // disables sharp entirely
   // },
 
-  api: {
-    bodyParser: {
-      sizeLimit: '50mb', // Change this value to your desired size limit
-    },
-  },
+  // api: {
+  //   bodyParser: {
+  //     sizeLimit: '50mb', // Change this value to your desired size limit
+  //   },
+  // },
 };
 
 export default nextConfig;
