@@ -129,12 +129,12 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="flex items-center mt-4">
-              <button className="flex-1 btn w-full  flex items-center justify-center text-white rounded-full text-center">
+              <Link  href="/submit-referral" className="flex-1 btn w-full  flex items-center justify-center text-white rounded-full text-center">
                 Submit A Referral
-              </button>
-              <span className="bgPrimary w-[52px] h-[52px] rounded-full flex items-center justify-center ">
+              </Link>
+              <Link  href="/submit-referral" className="bgPrimary w-[52px] h-[52px] rounded-full flex items-center justify-center ">
                 <ArrowUpIcon />
-              </span>
+              </Link>
             </div>
           </div>
         </div>
