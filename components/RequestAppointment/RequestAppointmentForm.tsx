@@ -231,7 +231,7 @@ export default function RequestAppointmentForm() {
                         </div>
 
                         {/* state */}
-                        <div>
+                        {/* <div>
                             <label className="text-[#4A4C56] lg:text-xl md:text-lg text-base leading-[180%] block font-semibold mb-1.5">
                                 Select your state
                             </label>
@@ -247,7 +247,7 @@ export default function RequestAppointmentForm() {
                                     ))}
                                 </SelectContent>
                             </Select>
-                        </div>
+                        </div> */}
 
                         <div className=""> 
                              <label className="text-[#4A4C56] lg:text-xl md:text-lg text-base leading-[180%] block font-semibold mb-1.5">

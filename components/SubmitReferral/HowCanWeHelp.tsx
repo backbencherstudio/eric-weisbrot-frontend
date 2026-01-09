@@ -41,6 +41,8 @@ export default function HowCanWeHelp() {
     setValue,
   } = useForm<FormData>();
 
+  const MAX_FILE_SIZE = 4 * 1024 * 1024;
+
   const onSubmit = async (data: FormData) => {
     console.log(data);
     console.log("Uploaded files:", uploadedFiles);
@@ -48,35 +50,33 @@ export default function HowCanWeHelp() {
     const formDataToSend = new FormData();
     // formDataToSend.append('formType', 'documentUpload');
     // formDataToSend.append('formData', JSON.stringify(data));
-    formDataToSend.append('firstName', data.firstName);
-    formDataToSend.append('lastName', data.lastName);
-    formDataToSend.append('phone', data.phone);
-    formDataToSend.append('email', data.email);
+    formDataToSend.append("firstName", data.firstName);
+    formDataToSend.append("lastName", data.lastName);
+    formDataToSend.append("phone", data.phone);
+    formDataToSend.append("email", data.email);
     if (uploadedFiles && uploadedFiles.length > 0) {
-      formDataToSend.append('document', uploadedFiles[0]); // Add the uploaded file
+      formDataToSend.append("document", uploadedFiles[0]); // Add the uploaded file
     }
 
-    
     try {
-      const response = await fetch('/api/sendEmailWithDocument', {
-        method: 'POST',
+      const response = await fetch("/api/sendEmailWithDocument", {
+        method: "POST",
         body: formDataToSend,
       });
 
       const result = await response.json();
       if (result.success) {
-        toast.success("Form submitted Successfully")
-        reset()
-        setUploadedFiles([])
+        toast.success("Form submitted Successfully");
+        reset();
+        setUploadedFiles([]);
       } else {
-        toast.error("Error submitting the form")
+        toast.error("Error submitting the form");
       }
     } catch (error) {
-      setUploadedFiles([])
-      console.error('Error submitting form:', error);
-      toast.error('Error submitting the form');
+      setUploadedFiles([]);
+      console.error("Error submitting form:", error);
+      toast.error("Error submitting the form");
     }
-
   };
 
   const handleDrag = useCallback((e: React.DragEvent) => {
@@ -89,6 +89,17 @@ export default function HowCanWeHelp() {
     }
   }, []);
 
+  // const handleDrop = useCallback((e: React.DragEvent) => {
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  //   setDragActive(false);
+
+  //   if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+  //     const files = Array.from(e.dataTransfer.files);
+  //     setUploadedFiles((prev) => [...prev, ...files]);
+  //   }
+  // }, []);
+
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -96,21 +107,50 @@ export default function HowCanWeHelp() {
 
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       const files = Array.from(e.dataTransfer.files);
-      setUploadedFiles((prev) => [...prev, ...files]);
+
+      const validFiles = files.filter((file) => {
+        if (file.size > MAX_FILE_SIZE) {
+          // alert(`${file.name} is larger than 4MB and was not added.`);
+          toast.error(`${file.name} is larger than 4MB and was not added.`);
+          return false;
+        }
+        return true;
+      });
+
+      setUploadedFiles((prev) => [...prev, ...validFiles]);
     }
   }, []);
 
+  // const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   if (e.target.files) {
+  //     const files = Array.from(e.target.files);
+  //     setUploadedFiles((prev) => [...prev, ...files]);
+  //   }
+  // };
+
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      const files = Array.from(e.target.files);
-      setUploadedFiles((prev) => [...prev, ...files]);
-    }
+    if (!e.target.files) return;
+
+    const files = Array.from(e.target.files);
+
+    const validFiles = files.filter((file) => {
+      if (file.size > MAX_FILE_SIZE) {
+        // alert(`${file.name} is larger than 4MB and was not added.`);
+        toast.error(`${file.name} is larger than 4MB and was not added.`);
+        return false;
+      }
+      return true;
+    });
+
+    setUploadedFiles((prev) => [...prev, ...validFiles]);
   };
 
   return (
     <div className="maxContainer lg:my-[100px] my-[60px]">
       <div className="flex flex-col gap-[15px] justify-center items-center mb-[15px] text-center">
-        <h1 className="headerText text-[#161721] !font-semibold">How Can We Help?</h1>
+        <h1 className="headerText text-[#161721] !font-semibold">
+          How Can We Help?
+        </h1>
         <p className="text-[#4A4C56] leading-[180%]">
           Have a question? Send us a message, and we'll get right back to you.
         </p>
@@ -120,14 +160,14 @@ export default function HowCanWeHelp() {
         <div className="w-full lg:w-[41.5%] bg-[#E9F7FC33] rounded-[24px] border border-[#0000000D]  justify-center">
           <div className="xl:p-8 md:p-6 p-4 flex flex-col">
             <h1 className="xl:text-[32px] md:text-[28px] text-2xl font-medium leading-[130%] text-[#1D1F2C]">
-              Refer Your Patients to Dr. Eric Weisbrot Infusion Suite for Exceptional
-              Care
+              Refer Your Patients to Dr. Eric Weisbrot Infusion Suite for
+              Exceptional Care
             </h1>
 
             <p className="text-[#4A4C56] xl:text-base lg:text-sm md:text-base text-sm leading-[180%]  md:mt-4 mt-3">
               Looking to refer your patients for infusion care at a Dr. Eric
-              Weisbrot infusion suite? You're in the right place! We make referrals
-              simple and easy.
+              Weisbrot infusion suite? You're in the right place! We make
+              referrals simple and easy.
             </p>
 
             <h2 className="text-[#1D1F2C] leading-[150%] font-medium lg:text-2xl md:text-xl text-lg md:mt-6 mt-4">
@@ -306,7 +346,6 @@ export default function HowCanWeHelp() {
                         className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                         accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
                         required
-                      
                       />
 
                       <div className="flex flex-col items-center ">

@@ -3,14 +3,14 @@ import { AppointmentForm, ContactForm, DocumentUploadForm, MessageForm } from '.
 
 const esc = (v: any) =>
   String(v ?? '').replace(/[&<>"']/g, s =>
-    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]!)
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[s]!)
   );
 
 const show = (v: any, fallback = '—') =>
   (v !== undefined && v !== null && String(v).trim() !== '') ? esc(v) : fallback;
 
 export function generateEmailTemplate(formData: ContactForm | DocumentUploadForm | MessageForm | AppointmentForm, formType: string): string {
-  
+
   // console.log('from generate => ', formData, formType)
   if (formType === 'contact') {
     const contactFormData = formData as ContactForm; // Narrow to ContactForm type
@@ -194,7 +194,7 @@ export function generateEmailTemplate(formData: ContactForm | DocumentUploadForm
                   <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Patient Name:</strong></td><td style="padding:8px 0;">${esc(a.firstName)} ${esc(a.lastName)}</td></tr>
                   <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Phone:</strong></td><td style="padding:8px 0;">${esc(a.phone)}</td></tr>
                   <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Email:</strong></td><td style="padding:8px 0;">${esc(a.email)}</td></tr>
-                  <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>State:</strong></td><td style="padding:8px 0;">${show(a.state)}</td></tr>
+
                   <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>Date of Birth:</strong></td><td style="padding:8px 0;">${show(a.dateOfBirth)}</td></tr>
                 </table>
               </td>
@@ -244,3 +244,4 @@ export function generateEmailTemplate(formData: ContactForm | DocumentUploadForm
 
 
 // <p><strong>Uploaded Documents:</strong> ${documentUploadFormData.documents ? documentUploadFormData.documents.name : 'No documents uploaded'}</p>
+//  <!--   <tr><td width="180" style="color:#6b7280;padding:8px 0;"><strong>State:</strong></td><td style="padding:8px 0;">${show(a.state)}</td></tr> -->
