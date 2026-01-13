@@ -89,7 +89,7 @@ export default function RequestAppointmentForm() {
          const result = await response?.json()
    
          if (result?.success) {
-           toast.success("Form submitted Successfully")
+           toast.success("Appointment request submitted")
          } else {
             toast.error("Form submission failed.")
          }
